@@ -117,7 +117,3 @@ npm ani-js
 ```
 
 ---
-
-## 📄 License
-
-MIT © 2025 Srinanth
