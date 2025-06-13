@@ -1,0 +1,22 @@
+{
+  "name": "ani-js",
+  "version": "1.0.0",
+  "description": "Tail-JS is a lightweight utility library that enhances Tailwind CSS with JavaScript-powered styling and interactive animations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srinanth/Tail-Js.git"
+  },
+  "keywords": [
+    "tjs"
+  ],
+  "author": "Srinanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Srinanth/Tail-Js/issues"
+  },
+  "homepage": "https://github.com/Srinanth/Tail-Js#readme"
+}
