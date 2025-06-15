@@ -309,5 +309,142 @@ export const animationsCSS = `
 }
 .tw-jack-in-the-box { animation: twJackInTheBox 1s ease forwards; }
 
+@keyframes twHeartbeat {
+  0%, 100% { transform: scale(1); }
+  14%, 42%, 70% { transform: scale(1.3); }
+}
+.tw-heartbeat { animation: twHeartbeat 1.5s ease-in-out infinite; }
 
+@keyframes twBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.tw-blink { animation: twBlink 1s step-start infinite; }
+
+@keyframes twWave {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(15deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}
+.tw-wave { animation: twWave 2s ease-in-out infinite; transform-origin: bottom center; display: inline-block; }
+
+@keyframes twSway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+.tw-sway { animation: twSway 2s ease-in-out infinite; }
+
+@keyframes twFloating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.tw-floating { animation: twFloating 3s ease-in-out infinite; }
+
+.tw-hover-blur:hover { filter: blur(2px); transition: filter 0.3s ease; }
+.tw-hover-rotate:hover { transform: rotate(10deg); transition: transform 0.3s ease; }
+.tw-hover-underline-left:hover { border-bottom: 2px solid; transform: scaleX(1); transform-origin: left; transition: all 0.3s ease; }
+.tw-hover-underline-right:hover { border-bottom: 2px solid; transform: scaleX(1); transform-origin: right; transition: all 0.3s ease; }
+.tw-hover-border-glow:hover { box-shadow: 0 0 10px 2px rgba(255,255,255,0.7); transition: box-shadow 0.3s ease; }
+.tw-hover-scale-bounce:hover { transform: scale(1.1); transition: transform 0.3s ease; }
+.tw-hover-tilt:hover { transform: rotate(3deg) skewX(3deg); transition: transform 0.3s ease; }
+
+@keyframes twGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+.tw-glitch { animation: twGlitch 0.3s infinite; }
+
+@keyframes twNeonGlow {
+  0%, 100% { text-shadow: 0 0 5px #fff; }
+  50% { text-shadow: 0 0 20px #0ff; }
+}
+.tw-neon-glow { animation: twNeonGlow 1s ease-in-out infinite; }
+
+@keyframes twShimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+.tw-shimmer {
+  background: linear-gradient(to right, #eeeeee 0%, #dddddd 50%, #eeeeee 100%);
+  background-size: 200% 100%;
+  animation: twShimmer 1.5s linear infinite;
+}
+
+@keyframes twTyping {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.tw-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: twTyping 3s steps(30, end) forwards;
+}
+
+@keyframes twRevealUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.tw-reveal-up { animation: twRevealUp 0.5s ease-out forwards; }
+
+@keyframes twRevealDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.tw-reveal-down { animation: twRevealDown 0.5s ease-out forwards; }
+
+@keyframes twCollapse {
+  from { height: auto; opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+.tw-collapse { animation: twCollapse 0.3s ease forwards; overflow: hidden; }
+
+@keyframes twExpand {
+  from { height: 0; opacity: 0; }
+  to { height: auto; opacity: 1; }
+}
+.tw-expand { animation: twExpand 0.3s ease forwards; overflow: hidden; }
+
+@keyframes twFadeSlideLeft {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.tw-fade-slide-left { animation: twFadeSlideLeft 0.5s ease-out forwards; }
+
+@keyframes twBounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.tw-bounce-in { animation: twBounceIn 0.6s ease-out forwards; }
+
+@keyframes twBounceOut {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+.tw-bounce-out { animation: twBounceOut 0.6s ease-in forwards; }
+
+@keyframes twScaleReveal {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.tw-scale-reveal { animation: twScaleReveal 0.4s ease-out forwards; }
+
+@keyframes twRotateYFlip {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(180deg); }
+}
+.tw-rotate-y-flip { animation: twRotateYFlip 0.8s ease-in-out forwards; transform-style: preserve-3d; }
+
+.tw-perspective {
+  perspective: 1000px;
+}
+  
 `;
