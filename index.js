@@ -1,153 +1,106 @@
 import { injectCSS } from './inject.js';
 
-export function fadeIn(el, duration = 500) {
+function animate(el, className, duration = 500) {
   injectCSS();
   el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-fade-in');
+  el.classList.add(className);
 }
 
-export function slideUp(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-slide-up');
+const animations = {
+  fadeIn: 'tw-fade-in',
+  fadeOut: 'tw-fade-out',
+
+  slideUp: 'tw-slide-up',
+  slideDown: 'tw-slide-down',
+  slideLeft: 'tw-slide-left',
+  slideRight: 'tw-slide-right',
+
+  scaleUp: 'tw-scale-up',
+  scaleDown: 'tw-scale-down',
+  enlarge: 'tw-enlarge',
+  shrink: 'tw-shrink',
+
+  rotate: 'tw-rotate',
+  bounce: 'tw-bounce',
+  shake: 'tw-shake',
+  pulse: 'tw-pulse',
+  flash: 'tw-flash',
+  wobble: 'tw-wobble',
+  swing: 'tw-swing',
+  tada: 'tw-tada',
+  jello: 'tw-jello',
+  Glow: 'tw-glow',
+  Shadow: 'tw-shadow',
+  zoomIn: 'tw-zoom-in',
+  zoomOut: 'tw-zoom-out',
+
+  HoverPop: 'tw-hoverpop',
+  HoverShrink: 'tw-hovershrink',
+  HoverEnlarge: 'tw-hoverenlarge',
+  HoverShake: 'tw-hovershake',
+  HoverFade: 'tw-hoverfade',
+  HoverGlow: 'tw-hover-glow',
+  HoverShadow: 'tw-hover-shadow',
+
+  flipInX: 'tw-flip-in-x',
+  flipOutX: 'tw-flip-out-x',
+  flipInY: 'tw-flip-in-y',
+  flipOutY: 'tw-flip-out-y',
+  rotateIn: 'tw-rotate-in',
+  rotateOut: 'tw-rotate-out',
+  rollIn: 'tw-roll-in',
+  rollOut: 'tw-roll-out',
+  lightSpeedIn: 'tw-light-speed-in',
+  lightSpeedOut: 'tw-light-speed-out',
+  jackInTheBox: 'tw-jack-in-the-box',
+};
+
+const exports = {};
+
+for (const [name, className] of Object.entries(animations)) {
+  exports[name] = (el, duration = 500) => animate(el, className, duration);
 }
-export function slideDown(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-slide-down');
-}
-export function slideLeft(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-slide-left');
-}
-export function slideRight(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-slide-right');
-}
-export function fadeOut(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-fade-out');
-}
-export function scaleUp(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-scale-up');
-}
-export function scaleDown(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-scale-down');
-}
-export function enlarge(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-enlarge');
-}
-export function shrink(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-shrink');
-}
-export function rotate(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-rotate');
-}
-export function bounce(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-bounce');
-}
-export function shake(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-shake');
-}
-export function pulse(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-pulse');
-}
-export function flash(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-flash');
-}
-export function wobble(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-wobble');
-}
-export function swing(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-swing');
-}
-export function tada(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-tada');
-}
-export function jello(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-jello');
-}
-export function zoomIn(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-zoom-in');
-}
-export function zoomOut(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-zoom-out');
-}
-export function HoverPop(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hoverpop');
-}
-export function HoverShrink(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hovershrink');
-}
-export function HoverEnlarge(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hoverenlarge');
-}
-export function HoverShake(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hovershake');
-}
-export function HoverFade(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hoverfade');
-}
-export function HoverGlow(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hover-glow');
-}
-export function Glow(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-glow');
-}
-export function Shadow(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-shadow');
-}
-export function HoverShadow(el, duration = 500) {
-  injectCSS();
-  el.style.animationDuration = `${duration}ms`;
-  el.classList.add('tw-hover-shadow');
-}
+
+export const {
+  fadeIn,
+  fadeOut,
+  slideUp,
+  slideDown,
+  slideLeft,
+  slideRight,
+  scaleUp,
+  scaleDown,
+  enlarge,
+  shrink,
+  rotate,
+  bounce,
+  shake,
+  pulse,
+  flash,
+  wobble,
+  swing,
+  tada,
+  jello,
+  zoomIn,
+  zoomOut,
+  HoverPop,
+  HoverShrink,
+  HoverEnlarge,
+  HoverShake,
+  HoverFade,
+  HoverGlow,
+  Glow,
+  Shadow,
+  HoverShadow,
+  flipInX,
+  flipOutX, 
+  flipInY, 
+  flipOutY,
+  rotateIn, 
+  rotateOut, 
+  rollIn, 
+  rollOut,
+  lightSpeedIn, 
+  lightSpeedOut, 
+  jackInTheBox,
+} = exports;

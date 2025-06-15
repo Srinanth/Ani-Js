@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Srinanth/Tail-Js.git"
+    "url": "git+https://github.com/Srinanth/Ani-Js.git"
   },
   "keywords": [
     "tjs"
@@ -16,7 +16,7 @@
   "author": "Srinanth",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Srinanth/Tail-Js/issues"
+    "url": "https://github.com/Srinanth/Ani-Js/issues"
   },
-  "homepage": "https://github.com/Srinanth/Tail-Js#readme"
+  "homepage": "https://github.com/Srinanth/Ani-Js#readme"
 }
