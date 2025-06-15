@@ -153,8 +153,8 @@ export const animationsCSS = `
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
-.tw-hoverpop {
-  animation: twHoverpop 0.3s ease-in-out infinite;
+.tw-hoverpop:hover {
+  animation: twHoverpop 0.3s ease-in-out;
 }
 
 @keyframes twHovershake {
@@ -162,15 +162,15 @@ export const animationsCSS = `
   10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
   20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
-.tw-hovershake {
-  animation: twHovershake 0.5s ease-in-out infinite;
+.tw-hovershake:hover {
+  animation: twHovershake 0.5s ease-in-out;
 }
 
 @keyframes twHoverfade {
   from { opacity: 1; }
   to { opacity: 0.5; }
 }
-.tw-hoverfade {
+.tw-hoverfade:hover {
   animation: twHoverfade 0.5s ease-in-out forwards;
 }
 
@@ -178,7 +178,7 @@ export const animationsCSS = `
   from { transform: scale(1); }
   to { transform: scale(1.2); }
 }
-.tw-hoverenlarge {
+.tw-hoverenlarge:hover {
   animation: twHoverenlarge 0.5s ease-out forwards;
 }
 
@@ -186,7 +186,7 @@ export const animationsCSS = `
   from { transform: scale(1.2); }
   to { transform: scale(1); }
 }
-.tw-hovershrink {
+.tw-hovershrink:hover {
   animation: twHovershrink 0.5s ease-in forwards;
 }
 
@@ -194,7 +194,7 @@ export const animationsCSS = `
   from { box-shadow: 0 0 5px rgba(255, 255, 255, 0); }
   to { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
 }
-.tw-hover-glow {
+.tw-hover-glow:hover {
   animation: twHoverGlow 0.5s ease-in-out forwards;
 }
 
@@ -218,7 +218,7 @@ export const animationsCSS = `
   from { box-shadow: 0 0 5px rgba(0, 0, 0, 0); }
   to { box-shadow: 0 0 20px rgba(0, 0, 0, 1); }
 }
-.tw-hover-shadow {
+.tw-hover-shadow:hover {
   animation: twHoverShadow 0.5s ease-in-out forwards;
 }
 @keyframes twTada {
@@ -241,6 +241,73 @@ export const animationsCSS = `
   animation: twJello 1s ease-in-out infinite;
 }
 
+@keyframes twFlipInX {
+  from { transform: perspective(400px) rotateX(90deg); opacity: 0; }
+  to { transform: perspective(400px) rotateX(0); opacity: 1; }
+}
+.tw-flip-in-x { animation: twFlipInX 0.6s ease-out forwards; }
+
+@keyframes twFlipOutX {
+  from { transform: perspective(400px) rotateX(0); opacity: 1; }
+  to { transform: perspective(400px) rotateX(90deg); opacity: 0; }
+}
+.tw-flip-out-x { animation: twFlipOutX 0.6s ease-in forwards; }
+
+@keyframes twFlipInY {
+  from { transform: perspective(400px) rotateY(90deg); opacity: 0; }
+  to { transform: perspective(400px) rotateY(0); opacity: 1; }
+}
+.tw-flip-in-y { animation: twFlipInY 0.6s ease-out forwards; }
+
+@keyframes twFlipOutY {
+  from { transform: perspective(400px) rotateY(0); opacity: 1; }
+  to { transform: perspective(400px) rotateY(90deg); opacity: 0; }
+}
+.tw-flip-out-y { animation: twFlipOutY 0.6s ease-in forwards; }
+
+@keyframes twRotateIn {
+  from { transform: rotate(-200deg); opacity: 0; }
+  to { transform: rotate(0deg); opacity: 1; }
+}
+.tw-rotate-in { animation: twRotateIn 0.6s ease-out forwards; }
+
+@keyframes twRotateOut {
+  from { transform: rotate(0deg); opacity: 1; }
+  to { transform: rotate(200deg); opacity: 0; }
+}
+.tw-rotate-out { animation: twRotateOut 0.6s ease-in forwards; }
+
+@keyframes twRollIn {
+  from { transform: translateX(-100%) rotate(-120deg); opacity: 0; }
+  to { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+.tw-roll-in { animation: twRollIn 0.8s ease-out forwards; }
+
+@keyframes twRollOut {
+  from { transform: translateX(0) rotate(0); opacity: 1; }
+  to { transform: translateX(100%) rotate(120deg); opacity: 0; }
+}
+.tw-roll-out { animation: twRollOut 0.8s ease-in forwards; }
+
+@keyframes twLightSpeedIn {
+  from { transform: translateX(100%) skewX(-30deg); opacity: 0; }
+  to { transform: translateX(0) skewX(0); opacity: 1; }
+}
+.tw-light-speed-in { animation: twLightSpeedIn 0.5s ease-out forwards; }
+
+@keyframes twLightSpeedOut {
+  from { transform: translateX(0) skewX(0); opacity: 1; }
+  to { transform: translateX(-100%) skewX(30deg); opacity: 0; }
+}
+.tw-light-speed-out { animation: twLightSpeedOut 0.5s ease-in forwards; }
+
+@keyframes twJackInTheBox {
+  from { opacity: 0; transform: scale(0.1) rotate(30deg); }
+  50% { transform: rotate(-10deg); }
+  70% { transform: rotate(3deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+.tw-jack-in-the-box { animation: twJackInTheBox 1s ease forwards; }
 
 
 `;
