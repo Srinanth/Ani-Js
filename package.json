@@ -1,6 +1,6 @@
 {
   "name": "ani-js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tail-JS is a lightweight utility library that enhances Tailwind CSS with JavaScript-powered styling and interactive animations.",
   "main": "index.js",
   "scripts": {
