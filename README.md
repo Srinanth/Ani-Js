@@ -133,6 +133,18 @@ function MyComponent() {
 | `bounceOut(el)`         | `.tw-bounce-out`            | Utility: animated bounce out                     |
 | `scaleReveal(el)`       | `.tw-scale-reveal`          | Utility: reveal from scaled center               |
 | `rotateYFlipCard(el)`   | `.tw-rotate-y-flip-card`    | Utility: 3D card flip on hover                   |
+| `glowPulse(el)`         | `.tw-glow-pulse`            | Loop: glowing pulse with scale/rotation          |
+| `sparkle(el)`           | `.tw-sparkle`               | Loop: floating sparkle dot                       |
+| `teleport(el)`          | `.tw-teleport`              | Utility: rapid vanish + reappear in patterns     |
+| `curtain(el)`           | `.tw-curtain`               | Entrance: horizontal curtain reveal              |
+| `mirror(el)`            | `.tw-mirror`                | Loop: mirror flipping animation                  |
+| `aura(el)`              | `.tw-aura`                  | Loop: glowing cyan aura effect                   |
+| `dust(el)`              | `.tw-dust`                  | Exit: float up, fade, scale out                  |
+| `zigzag(el)`            | `.tw-zigzag`                | Loop: side-to-side zigzag motion                 |
+| `orbit(el)`             | `.tw-orbit`                 | Loop: object rotates around a center             |
+| `popUpSpin(el)`         | `.tw-popup-spin`            | Entrance: scale + spin popup                     |
+| `Snap(el)`              | `.tw-thanos-snap`           | Exit: dusty vanish with blur and clip effect     |
+
 
 
 
