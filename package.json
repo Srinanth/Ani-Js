@@ -11,7 +11,11 @@
     "url": "git+https://github.com/Srinanth/Ani-Js.git"
   },
   "keywords": [
-    "tjs"
+    "animation",
+    "tailwind",
+    "javascript",
+    "css",
+    "utility"
   ],
   "author": "Srinanth",
   "license": "ISC",
