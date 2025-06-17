@@ -589,6 +589,34 @@ export const animationsCSS = `
 .tw-teleport {
   animation: twTeleport 4s ease-in-out infinite;
 }
+@keyframes twTeleportHover {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  11% {
+    transform: translate(-150px, 0);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(-150px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.tw-hover-teleport {
+  transition: none;
+}
+
+.tw-hover-teleport:hover {
+  animation: twTeleportHover 1s ease-in-out forwards;
+}
 
 @keyframes twCurtain {
   0% {
@@ -727,4 +755,297 @@ export const animationsCSS = `
   border-radius: 6px;
   animation: twThanosSnap 1.5s ease-in-out forwards;
 }
+
+@keyframes twUpsideDown {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+.tw-upside-down {
+  transform-style: preserve-3d;
+  animation: twUpsideDown 0.8s ease-in-out forwards;
+  
+}
+.tw-hover-upsidedown {
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.tw-hover-upsidedown:hover {
+  transform: rotateX(180deg);
+}
+
+@keyframes twColorCycle {
+  0%   { background-color: #FF5733; color: #FFF700; }   /* Orange + Yellow */
+  10%  { background-color: #FF8D1A; color: #00FF00; }   /* Light Orange + Lime */
+  20%  { background-color: #FFD700; color: #0000FF; }   /* Gold + Blue */
+  30%  { background-color: #00FF00; color: #FF00FF; }   /* Lime + Magenta */
+  40%  { background-color: #00FFFF; color: #FF1493; }   /* Aqua + Deep Pink */
+  50%  { background-color: #1E90FF; color: #FFD700; }   /* Dodger Blue + Gold */
+  60%  { background-color: #8A2BE2; color: #00FF00; }   /* BlueViolet + Lime */
+  70%  { background-color: #FF1493; color: #00FFFF; }   /* Deep Pink + Aqua */
+  80%  { background-color: #FF4500; color: #00FF7F; }   /* OrangeRed + Spring Green */
+  90%  { background-color: #00FA9A; color: #FF4500; }   /* Medium Spring Green + OrangeRed */
+  100% { background-color: #FF5733; color: #FFF700; }   /* Back to start */
+}
+
+.tw-color-cycle {
+  animation: twColorCycle 6s linear infinite;
+}
+
+@keyframes twBlackRed {
+  0% { background-color: black; color: red; }
+  100% { background-color: black; color: red; }
+}
+.tw-black-red {
+  animation: twBlackRed 1s linear infinite;
+}
+@keyframes twBlackGreen {
+  0% { background-color: black; color: green; }
+  100% { background-color: black; color: green; }
+}
+.tw-black-green {
+  animation: twBlackGreen 1s linear infinite;
+}
+@keyframes twBlackBlue {
+  0% { background-color: black; color: blue; }
+  100% { background-color: black; color: blue; }
+}
+.tw-black-blue {
+  animation: twBlackBlue 1s linear infinite;
+}
+@keyframes twBlackYellow {
+  0% { background-color: black; color: yellow; }
+  100% { background-color: black; color: yellow; }
+}
+.tw-black-yellow {
+  animation: twBlackYellow 1s linear infinite;
+}
+@keyframes twBlackPurple {
+  0% { background-color: black; color: purple; }
+  100% { background-color: black; color: purple; }
+}
+.tw-black-purple {
+  animation: twBlackPurple 1s linear infinite;
+}
+@keyframes twBlackWhite {
+  0% { background-color: black; color: white; }
+  100% { background-color: black; color: white; }
+}
+.tw-black-white {
+  animation: twBlackWhite 1s linear infinite;
+}
+@keyframes twBlackCyan {
+  0% { background-color: black; color: cyan; }
+  100% { background-color: black; color: cyan; }
+}
+.tw-black-cyan {
+  animation: twBlackCyan 1s linear infinite;
+}
+@keyframes twBlackMagenta {
+  0% { background-color: black; color: magenta; }
+  100% { background-color: black; color: magenta; }
+}
+.tw-black-magenta {
+  animation: twBlackMagenta 1s linear infinite;
+}
+@keyframes twBlackOrange {
+  0% { background-color: black; color: orange; }
+  100% { background-color: black; color: orange; }
+}
+.tw-black-orange {
+  animation: twBlackOrange 1s linear infinite;
+}
+@keyframes twBlackPink {
+  0% { background-color: black; color: pink; }
+  100% { background-color: black; color: pink; }
+}
+.tw-black-pink {
+  animation: twBlackPink 1s linear infinite;
+}
+@keyframes twBlackGray {
+  0% { background-color: black; color: gray; }
+  100% { background-color: black; color: gray; }
+}
+.tw-black-gray {
+  animation: twBlackGray 1s linear infinite;
+}
+@keyframes twBlackBrown {
+  0% { background-color: black; color: brown; }
+  100% { background-color: black; color: brown; }
+}
+.tw-black-brown {
+  animation: twBlackBrown 1s linear infinite;
+}
+@keyframes twBlackGold {
+  0% { background-color: black; color: gold; }
+  100% { background-color: black; color: gold; }
+}
+.tw-black-gold {
+  animation: twBlackGold 1s linear infinite;
+}
+@keyframes twBlackSilver {
+  0% { background-color: black; color: silver; }
+  100% { background-color: black; color: silver; }
+}
+.tw-black-silver {
+  animation: twBlackSilver 1s linear infinite;
+}
+
+@keyframes twBlueYellow {
+  0% { background-color: blue; color: yellow; }
+  100% { background-color: blue; color: yellow; }
+}
+.tw-blue-yellow {
+  animation: twBlueYellow 1s linear infinite;
+}
+
+@keyframes twDarkGreenLime {
+  0% { background-color: #004d00; color: #ccff00; }
+  100% { background-color: #004d00; color: #ccff00; }
+}
+.tw-dark-green-lime {
+  animation: twDarkGreenLime 1s linear infinite;
+}
+
+@keyframes twPurpleOrange {
+  0% { background-color: purple; color: orange; }
+  100% { background-color: purple; color: orange; }
+}
+.tw-purple-orange {
+  animation: twPurpleOrange 1s linear infinite;
+}
+
+@keyframes twIndigoPink {
+  0% { background-color: indigo; color: pink; }
+  100% { background-color: indigo; color: pink; }
+}
+.tw-indigo-pink {
+  animation: twIndigoPink 1s linear infinite;
+}
+
+@keyframes twGrayCyan {
+  0% { background-color: gray; color: cyan; }
+  100% { background-color: gray; color: cyan; }
+}
+.tw-gray-cyan {
+  animation: twGrayCyan 1s linear infinite;
+}
+
+@keyframes twDarkBlueWhite {
+  0% { background-color: #00008b; color: white; }
+  100% { background-color: #00008b; color: white; }
+}
+.tw-dark-blue-white {
+  animation: twDarkBlueWhite 1s linear infinite;
+}
+
+@keyframes twTealSalmon {
+  0% { background-color: teal; color: salmon; }
+  100% { background-color: teal; color: salmon; }
+}
+.tw-teal-salmon {
+  animation: twTealSalmon 1s linear infinite;
+}
+
+@keyframes twOliveViolet {
+  0% { background-color: olive; color: violet; }
+  100% { background-color: olive; color: violet; }
+}
+.tw-olive-violet {
+  animation: twOliveViolet 1s linear infinite;
+}
+
+@keyframes twBrownSkyBlue {
+  0% { background-color: brown; color: skyblue; }
+  100% { background-color: brown; color: skyblue; }
+}
+.tw-brown-skyblue {
+  animation: twBrownSkyBlue 1s linear infinite;
+}
+
+@keyframes twCrimsonLemon {
+  0% { background-color: crimson; color: lemonchiffon; }
+  100% { background-color: crimson; color: lemonchiffon; }
+}
+.tw-crimson-lemon {
+  animation: twCrimsonLemon 1s linear infinite;
+}
+
+@keyframes twSlatePeach {
+  0% { background-color: slategray; color: peachpuff; }
+  100% { background-color: slategray; color: peachpuff; }
+}
+.tw-slate-peach {
+  animation: twSlatePeach 1s linear infinite;
+}
+
+@keyframes twCharcoalLavender {
+  0% { background-color: #36454F; color: lavender; }
+  100% { background-color: #36454F; color: lavender; }
+}
+.tw-charcoal-lavender {
+  animation: twCharcoalLavender 1s linear infinite;
+}
+
+@keyframes twMaroonMint {
+  0% { background-color: maroon; color: mediumspringgreen; }
+  100% { background-color: maroon; color: mediumspringgreen; }
+}
+.tw-maroon-mint {
+  animation: twMaroonMint 1s linear infinite;
+}
+
+@keyframes twDarkCyanGold {
+  0% { background-color: darkcyan; color: gold; }
+  100% { background-color: darkcyan; color: gold; }
+}
+.tw-dark-cyan-gold {
+  animation: twDarkCyanGold 1s linear infinite;
+}
+
+@keyframes twDeepPurpleIvory {
+  0% { background-color: #4b0082; color: ivory; }
+  100% { background-color: #4b0082; color: ivory; }
+}
+.tw-deep-purple-ivory {
+  animation: twDeepPurpleIvory 1s linear infinite;
+}
+
+@keyframes twForestPink {
+  0% { background-color: forestgreen; color: hotpink; }
+  100% { background-color: forestgreen; color: hotpink; }
+}
+.tw-forest-pink {
+  animation: twForestPink 1s linear infinite;
+}
+
+@keyframes twSteelRose {
+  0% { background-color: steelblue; color: rosybrown; }
+  100% { background-color: steelblue; color: rosybrown; }
+}
+.tw-steel-rose {
+  animation: twSteelRose 1s linear infinite;
+}
+
+@keyframes twEggplantSun {
+  0% { background-color: #614051; color: #fcd12a; }
+  100% { background-color: #614051; color: #fcd12a; }
+}
+.tw-eggplant-sun {
+  animation: twEggplantSun 1s linear infinite;
+}
+
+@keyframes twMidnightMint {
+  0% { background-color: #003b36; color: #aaffcc; }
+  100% { background-color: #003b36; color: #aaffcc; }
+}
+.tw-midnight-green-mint {
+  animation: twMidnightMint 1s linear infinite;
+}
+
 `;
