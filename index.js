@@ -43,7 +43,7 @@ const animations = {
   revealDown: "tw-reveal-down",
   collapse: "tw-collapse",
   expand: "tw-expand",
-  fadeSlide: "tw-fade-slide",
+  fadeSlide: "tw-fade-slide-left",
   bounceIn: "tw-bounce-in",
   bounceOut: "tw-bounce-out",
   scaleReveal: "tw-scale-reveal",
@@ -70,6 +70,7 @@ const animations = {
   Orbit: "tw-orbit",
   PopUpSpin: "tw-popup-spin",
   Snap:"tw-thanos-snap",
+  UpsideDown: "tw-upside-down",
 
   HoverPop: "tw-hoverpop",
   HoverShrink: "tw-hovershrink",
@@ -85,6 +86,43 @@ const animations = {
   hoverBorderGlow: "tw-hover-border-glow",
   hoverScaleBounce: "tw-hover-scale-bounce",
   hoverTilt: "tw-hover-tilt",
+  HoverUpsideDown: "tw-hover-upsidedown",
+  HoverTeleport: "tw-hover-teleport",
+
+  ColorCycle: "tw-color-cycle",
+  BlackRed: "tw-black-red",
+  BlackBlue: "tw-black-blue",
+  BlackGreen: "tw-black-green",
+  BlackPurple: "tw-black-purple",
+  BlackYellow: "tw-black-yellow",
+  BlackWhite: "tw-black-white",
+  BlackOrange: "tw-black-orange",
+  BlackPink: "tw-black-pink",
+  BlackGray: "tw-black-gray",
+  BlackCyan: "tw-black-cyan",
+  BlackBrown: "tw-black-brown",
+  BlackGold: "tw-black-gold",
+  BlackSilver: "tw-black-silver",
+  BlackMagenta: "tw-black-magenta",
+  BlueYellow: "tw-blue-yellow",
+  DarkGreenLime: "tw-dark-green-lime",
+  PurpleOrange: "tw-purple-orange",
+  IndigoPink: "tw-indigo-pink",
+  GrayCyan: "tw-gray-cyan",
+  DarkBlueWhite: "tw-dark-blue-white",
+  TealSalmon: "tw-teal-salmon",
+  OliveViolet: "tw-olive-violet",
+  BrownSkyBlue: "tw-brown-sky-blue",
+  MidnightGreenMint: "tw-midnight-green-mint",
+  CrimsonLemon: "tw-crimson-lemon",
+  SlatePeach: "tw-slate-peach",
+  CharcoalLavender: "tw-charcoal-lavender",
+  MaroonMint: "tw-maroon-mint",
+  DarkCyanGold: "tw-dark-cyan-gold",
+  DeepPurpleIvory: "tw-deep-purple-ivory",
+  ForestPink: "tw-forest-pink",
+  SteelRose: "tw-steel-rose",
+  EggplantSun: "tw-eggplant-sun",
 };
 
 const exports = {};
@@ -104,10 +142,18 @@ export const {
   revealDown, collapse, expand, fadeSlide, bounceIn, bounceOut,
   scaleReveal, rotateYFlipCard, Glow, Shadow, GlowPulse, Sparkle,
   Teleport,Curtain,Mirror,Aura,Dust,ZigZag,Orbit,PopUpSpin,Snap,
-
+  UpsideDown,
 
   HoverPop, HoverShrink, HoverEnlarge, HoverShake, HoverFade, HoverGlow,
   HoverShadow, hoverBlur, hoverRotate, hoverUnderlineLeft, hoverUnderlineRight, hoverBorderGlow,
-  hoverScaleBounce, hoverTilt
+  hoverScaleBounce, hoverTilt,HoverUpsideDown,HoverTeleport,
+
+  ColorCycle, BlackRed,
+  BlackBlue,BlackGreen,BlackPurple,BlackYellow, BlackWhite,BlackOrange,BlackPink,
+  BlackGray,BlackCyan,BlackBrown,BlackGold,BlackSilver,BlackMagenta,
+  BlueYellow,DarkGreenLime,PurpleOrange,IndigoPink,GrayCyan,DarkBlueWhite,
+  TealSalmon,OliveViolet,BrownSkyBlue,MidnightGreenMint,CrimsonLemon,
+  SlatePeach,CharcoalLavender,MaroonMint,DarkCyanGold,DeepPurpleIvory,
+  ForestPink,SteelRose,EggplantSun
 } = exports;
 

@@ -9,6 +9,7 @@ A lightweight JavaScript animation library that mimics Tailwind-style utility cl
 - 💨 Utility-class style like `.tw-fade-in`  
 - ⚡ Zero setup, just import and use  
 - 🧩 Works with plain JavaScript, React, Vue, TypeScript, and more  
+- 🎨 100+ prebuilt animations and effects
 
 ---
 
@@ -144,8 +145,43 @@ function MyComponent() {
 | `orbit(el)`             | `.tw-orbit`                 | Loop: object rotates around a center             |
 | `popUpSpin(el)`         | `.tw-popup-spin`            | Entrance: scale + spin popup                     |
 | `Snap(el)`              | `.tw-thanos-snap`           | Exit: dusty vanish with blur and clip effect     |
-
-
+| `UpsideDown(el)`        | `.tw-upside-down`           | Turns the object upside down                     |
+| `HoverUpsideDown(el)`   | `.tw-hover-upsidedown`      | Hover: Turns the object upside down              |
+| `HoverTeleport(el)`     | `.tw-hover-teleport`        | Hover: Teleports the object on hover             |
+| `ColorCycle`            | `.tw-color-cycle`           | Color: cycles through multiple color themes      |
+| `BlackRed`              | `.tw-black-red`             | Color: black background with red text            |
+| `BlackBlue`             | `.tw-black-blue`            | Color: black background with blue text           |
+| `BlackGreen`            | `.tw-black-green`           | Color: black background with green text          |
+| `BlackPurple`           | `.tw-black-purple`          | Color: black background with purple text         |
+| `BlackYellow`           | `.tw-black-yellow`          | Color: black background with yellow text         |
+| `BlackWhite`            | `.tw-black-white`           | Color: black background with white text          |
+| `BlackOrange`           | `.tw-black-orange`          | Color: black background with orange text         |
+| `BlackPink`             | `.tw-black-pink`            | Color: black background with pink text           |
+| `BlackGray`             | `.tw-black-gray`            | Color: black background with gray text           |
+| `BlackCyan`             | `.tw-black-cyan`            | Color: black background with cyan text           |
+| `BlackBrown`            | `.tw-black-brown`           | Color: black background with brown text          |
+| `BlackGold`             | `.tw-black-gold`            | Color: black background with gold text           |
+| `BlackSilver`           | `.tw-black-silver`          | Color: black background with silver text         |
+| `BlackMagenta`          | `.tw-black-magenta`         | Color: black background with magenta text        |
+| `BlueYellow`            | `.tw-blue-yellow`           | Color: blue background with yellow text          |
+| `DarkGreenLime`         | `.tw-dark-green-lime`       | Color: dark green background with lime text      |
+| `PurpleOrange`          | `.tw-purple-orange`         | Color: purple background with orange text        |
+| `IndigoPink`            | `.tw-indigo-pink`           | Color: indigo background with pink text          |
+| `GrayCyan`              | `.tw-gray-cyan`             | Color: gray background with cyan text            |
+| `DarkBlueWhite`         | `.tw-dark-blue-white`       | Color: dark blue background with white text      |
+| `TealSalmon`            | `.tw-teal-salmon`           | Color: teal background with salmon text          |
+| `OliveViolet`           | `.tw-olive-violet`          | Color: olive background with violet text         |
+| `BrownSkyBlue`          | `.tw-brown-sky-blue`        | Color: brown background with sky blue text       |
+| `MidnightGreenMint`     | `.tw-midnight-green-mint`   | Color: midnight green background with mint text  |
+| `CrimsonLemon`          | `.tw-crimson-lemon`         | Color: crimson background with lemon text        |
+| `SlatePeach`            | `.tw-slate-peach`           | Color: slate background with peach text          |
+| `CharcoalLavender`      | `.tw-charcoal-lavender`     | Color: charcoal background with lavender text    |
+| `MaroonMint`            | `.tw-maroon-mint`           | Color: maroon background with mint text          |
+| `DarkCyanGold`          | `.tw-dark-cyan-gold`        | Color: dark cyan background with gold text       |
+| `DeepPurpleIvory`       | `.tw-deep-purple-ivory`     | Color: deep purple background with ivory text    |
+| `ForestPink`            | `.tw-forest-pink`           | Color: forest green background with pink text    |
+| `SteelRose`             | `.tw-steel-rose`            | Color: steel background with rose text           |
+| `EggplantSun`           | `.tw-eggplant-sun`          | Color: eggplant background with sun-yellow text  |
 
 
 All animations accept an optional duration parameter (in milliseconds).
