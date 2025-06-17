@@ -1,7 +1,7 @@
 {
   "name": "ani-js",
   "version": "1.3.0",
-  "description": "Tail-JS is a lightweight utility library that enhances Tailwind CSS with JavaScript-powered styling and interactive animations.",
+  "description": "Ani-JS is a lightweight utility library that enhances Tailwind CSS with JavaScript-powered styling and interactive animations.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
