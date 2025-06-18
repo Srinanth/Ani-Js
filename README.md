@@ -33,15 +33,15 @@ yarn add ani-js
 
 ```html
 <div id="box">Hello</div>
-<button onclick="animate()">Animate</button>
+<button id="btn">Animate</button>
 
 <script type="module">
   import { fadeIn } from 'ani-js';
 
-  function animate() {
+  document.getElementById('btn').addEventListener('click', () => {
     const el = document.getElementById('box');
     fadeIn(el, 700);
-  }
+  });
 </script>
 ```
 
