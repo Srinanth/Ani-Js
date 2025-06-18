@@ -50,7 +50,8 @@ yarn add ani-js
 > To run this successfully, you must:
 > - Use a **module-aware bundler or dev server** such as **[Vite](https://vitejs.dev/)**, **Webpack**, or **Parcel**
 > **OR**
-> - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/), [UNPKG](https://unpkg.com/)) that supports **ES Modules**
+> - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/index.js), [UNPKG](https://app.unpkg.com/ani-js@1.4.0/files/index.js)) that 
+> supports **ES Modules**
 >
 > Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
 
