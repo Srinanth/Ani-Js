@@ -44,6 +44,17 @@ yarn add ani-js
   });
 </script>
 ```
+> ⚠️ **Important:**  
+> This example uses **ES Module syntax (`import`)** and **will not work by directly opening the HTML file in a browser**.  
+>
+> To run this successfully, you must:
+> - Use a **module-aware bundler or dev server** such as **[Vite](https://vitejs.dev/)**, **Webpack**, or **Parcel**
+> **OR**
+> - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/), [UNPKG](https://unpkg.com/)) that supports **ES Modules**
+>
+> Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
+
+---
 
 ### ⚛️ React
 
