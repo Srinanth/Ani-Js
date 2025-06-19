@@ -34,7 +34,8 @@ yarn add ani-js
 ```html
 <div id="box">Hello</div>
 <button id="btn">Animate</button>
-
+<!-- for class based usage -->
+<div id="box" class="tw-fade-in">Hello</div>
 <script type="module">
   import { fadeIn } from 'ani-js';
 
@@ -52,7 +53,8 @@ yarn add ani-js
 > **OR**
 > - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/index.js), [UNPKG](https://app.unpkg.com/ani-js@1.4.0/files/index.js)) that 
 > supports **ES Modules**
->
+> - To use as classes in Html use stylesheets as [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css)
+> for React Import the package then in your App.jsx or Main.jsx import the classes from "../node_modules/ani-js/ani-js.css" set it as global so you can use it anywhere.
 > Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
 
 ---
@@ -62,6 +64,15 @@ yarn add ani-js
 ```jsx
 import { slideUp } from 'ani-js';
 import { useEffect, useRef } from 'react';
+
+function MyComponent() {
+  return (
+    //for class based usage
+    <div className="tw-slide-up">
+      Welcome!
+    </div>
+  );
+}
 
 function MyComponent() {
   const ref = useRef();
@@ -78,161 +89,125 @@ function MyComponent() {
 
 ## ✨ Supported Animations
 
-| Function                | Description                                      |
-|-------------------------|--------------------------------------------------|
-| `fadeIn(el)`            | Fade in from opacity 0                           |
-| `fadeOut(el)`           | Fade out to opacity 0                            |
-| `slideUp(el)`           | Slide upward and fade in                         |
-| `slideDown(el)`         | Slide downward and fade in                       |
-| `slideLeft(el)`         | Slide in from the right                          |
-| `slideRight(el)`        | Slide in from the left                           |
-| `scaleUp(el)`           | Scale up while fading in                         |
-| `scaleDown(el)`         | Scale down while fading out                      |
-| `enlarge(el)`           | Slightly enlarges the element                    |
-| `shrink(el)`            | Slightly shrinks the element                     |
-| `rotate(el)`            | Rotates the element 360°                         |
-| `bounce(el)`            | Bounces the element repeatedly                   |
-| `shake(el)`             | Horizontal shaking animation                     |
-| `pulse(el)`             | Pulsing zoom effect                              |
-| `flash(el)`             | Quick opacity flicker                            |
-| `wobble(el)`            | Shaky wobble motion                              |
-| `swing(el)`             | Swing back and forth                             |
-| `tada(el)`              | Small celebratory zooms in-out                   |
-| `jello(el)`             | Wiggly skew motion                               |
-| `zoomIn(el)`            | Zoom in from scale 0.5 to 1                      |
-| `zoomOut(el)`           | Zoom out to scale 0.5 and fade                   |
-| `HoverPop(el)`          | Hover: pop animation                             |
-| `HoverShrink(el)`       | Hover: slight shrink                             |
-| `HoverEnlarge(el)`      | Hover: slight enlarge                            |
-| `HoverShake(el)`        | Hover: left-right shake                          |
-| `HoverFade(el)`         | Hover: reduce opacity                            |
-| `HoverGlow(el)`         | Hover: glowing box-shadow                        |
-| `Glow(el)`              | Static glowing box-shadow                        |
-| `Shadow(el)`            | Applies dark shadow                              |
-| `HoverShadow(el)`       | Hover: grows in shadow intensity                 |
-| `flipInX(el)`           | Entrance: flips in along X-axis                  |
-| `flipOutX(el)`          | Exit: flips out along X-axis                     |
-| `flipInY(el)`           | Entrance: flips in along Y-axis                  |
-| `flipOutY(el)`          | Exit: flips out along Y-axis                     |
-| `rotateIn(el)`          | Entrance: rotates in                             |
-| `rotateOut(el)`         | Exit: rotates out                                |
-| `rollIn(el)`            | Entrance: rolls in                               |
-| `rollOut(el)`           | Exit: rolls out                                  |
-| `lightSpeedIn(el)`      | Entrance: fast skewed slide in                   |
-| `lightSpeedOut(el)`     | Exit: fast skewed slide out                      |
-| `jackInTheBox(el)`      | Entrance: rotate + scale bounce in               |
-| `heartbeat(el)`         | Loop: pulsing heartbeat scale                    |
-| `blink(el)`             | Loop: blinking animation                         |
-| `wave(el)`              | Loop: emoji/text waving motion                   |
-| `sway(el)`              | Loop: slow side-to-side sway                     |
-| `floating(el)`          | Loop: smooth up-and-down motion                  |
-| `hoverBlur(el)`         | Hover: applies blur on hover                     |
-| `hoverRotate(el)`       | Hover: rotates slightly                          |
-| `hoverUnderlineLeft(el)`| Hover: underline grows from left                 |
-| `hoverUnderlineRight(el)`| Hover: underline grows from right              |
-| `hoverBorderGlow(el)`   | Hover: border glow effect                        |
-| `hoverScaleBounce(el)`  | Hover: bouncy scaling effect                     |
-| `hoverTilt(el)`         | Hover: slight tilt effect                        |
-| `glitch(el)`            | Special: jittery glitch animation                |
-| `neonGlow(el)`          | Special: pulsing neon glow                       |
-| `shimmer(el)`           | Special: animated shimmer loading effect         |
-| `typingEffect(el)`      | Special: text typing with blinking cursor        |
-| `revealUp(el)`          | Utility: fades in while sliding upward           |
-| `revealDown(el)`        | Utility: fades in while sliding downward         |
-| `collapse(el)`          | Utility: collapses height to 0                   |
-| `expand(el)`            | Utility: expands height from 0                   |
-| `fadeSlide(el)`         | Utility: fade in + slide combo                   |
-| `bounceIn(el)`          | Utility: animated bounce in                      |
-| `bounceOut(el)`         | Utility: animated bounce out                     |
-| `scaleReveal(el)`       | Utility: reveal from scaled center               |
-| `rotateYFlipCard(el)`   | Utility: 3D card flip on hover                   |
-| `glowPulse(el)`         | Loop: glowing pulse with scale/rotation          |
-| `sparkle(el)`           | Loop: floating sparkle dot                       |
-| `teleport(el)`          | Utility: rapid vanish + reappear in patterns     |
-| `curtain(el)`           | Entrance: horizontal curtain reveal              |
-| `mirror(el)`            | Loop: mirror flipping animation                  |
-| `aura(el)`              | Loop: glowing cyan aura effect                   |
-| `dust(el)`              | Exit: float up, fade, scale out                  |
-| `zigzag(el)`            | Loop: side-to-side zigzag motion                 |
-| `orbit(el)`             | Loop: object rotates around a center             |
-| `popUpSpin(el)`         | Entrance: scale + spin popup                     |
-| `Snap(el)`              | Exit: dusty vanish with blur and clip effect     |
-| `UpsideDown(el)`        | Turns the object upside down                     |
-| `HoverUpsideDown(el)`   | Hover: Turns the object upside down              |
-| `HoverTeleport(el)`     | Hover: Teleports the object on hover             |
-| `ColorCycle`            | Color: cycles through multiple color themes      |
-| `BlackRed`              | Color: black background with red text            |
-| `BlackBlue`             | Color: black background with blue text           |
-| `BlackGreen`            | Color: black background with green text          |
-| `BlackPurple`           | Color: black background with purple text         |
-| `BlackYellow`           | Color: black background with yellow text         |
-| `BlackWhite`            | Color: black background with white text          |
-| `BlackOrange`           | Color: black background with orange text         |
-| `BlackPink`             | Color: black background with pink text           |
-| `BlackGray`             | Color: black background with gray text           |
-| `BlackCyan`             | Color: black background with cyan text           |
-| `BlackBrown`            | Color: black background with brown text          |
-| `BlackGold`             | Color: black background with gold text           |
-| `BlackSilver`           | Color: black background with silver text         |
-| `BlackMagenta`          | Color: black background with magenta text        |
-| `BlueYellow`            | Color: blue background with yellow text          |
-| `DarkGreenLime`         | Color: dark green background with lime text      |
-| `PurpleOrange`          | Color: purple background with orange text        |
-| `IndigoPink`            | Color: indigo background with pink text          |
-| `GrayCyan`              | Color: gray background with cyan text            |
-| `DarkBlueWhite`         | Color: dark blue background with white text      |
-| `TealSalmon`            | Color: teal background with salmon text          |
-| `OliveViolet`           | Color: olive background with violet text         |
-| `BrownSkyBlue`          | Color: brown background with sky blue text       |
-| `MidnightGreenMint`     | Color: midnight green background with mint text  |
-| `CrimsonLemon`          | Color: crimson background with lemon text        |
-| `SlatePeach`            | Color: slate background with peach text          |
-| `CharcoalLavender`      | Color: charcoal background with lavender text    |
-| `MaroonMint`            | Color: maroon background with mint text          |
-| `DarkCyanGold`          | Color: dark cyan background with gold text       |
-| `DeepPurpleIvory`       | Color: deep purple background with ivory text    |
-| `ForestPink`            | Color: forest green background with pink text    |
-| `SteelRose`             | Color: steel background with rose text           |
-| `EggplantSun`           | Color: eggplant background with sun-yellow text  |
+# Ani-JS Function Reference
 
+| Function                  | Class Name               | Description                                      |
+|:--------------------------|:-------------------------|:-------------------------------------------------|
+| `fadeIn(el)`              | `tw-fadeIn`              | Fade in from opacity 0                           |
+| `fadeOut(el)`             | `tw-fadeOut`             | Fade out to opacity 0                            |
+| `slideUp(el)`             | `tw-slideUp`             | Slide upward and fade in                         |
+| `slideDown(el)`           | `tw-slideDown`           | Slide downward and fade in                       |
+| `slideLeft(el)`           | `tw-slideLeft`           | Slide in from the right                          |
+| `slideRight(el)`          | `tw-slideRight`          | Slide in from the left                           |
+| `scaleUp(el)`             | `tw-scaleUp`             | Scale up while fading in                         |
+| `scaleDown(el)`           | `tw-scaleDown`           | Scale down while fading out                      |
+| `enlarge(el)`             | `tw-enlarge`             | Slightly enlarges the element                    |
+| `shrink(el)`              | `tw-shrink`              | Slightly shrinks the element                     |
+| `rotate(el)`              | `tw-rotate`              | Rotates the element 360°                         |
+| `bounce(el)`              | `tw-bounce`              | Bounces the element repeatedly                   |
+| `shake(el)`               | `tw-shake`               | Horizontal shaking animation                     |
+| `pulse(el)`               | `tw-pulse`               | Pulsing zoom effect                              |
+| `flash(el)`               | `tw-flash`               | Quick opacity flicker                            |
+| `wobble(el)`              | `tw-wobble`              | Shaky wobble motion                              |
+| `swing(el)`               | `tw-swing`               | Swing back and forth                             |
+| `tada(el)`                | `tw-tada`                | Small celebratory zooms in-out                   |
+| `jello(el)`               | `tw-jello`               | Wiggly skew motion                               |
+| `Glow(el)`                | `tw-Glow`                | Static glowing box-shadow                        |
+| `Shadow(el)`              | `tw-Shadow`              | Applies dark shadow                              |
+| `zoomIn(el)`              | `tw-zoomIn`              | Zoom in from scale 0.5 to 1                      |
+| `zoomOut(el)`             | `tw-zoomOut`             | Zoom out to scale 0.5 and fade                   |
+| `heartbeat(el)`           | `tw-heartbeat`           | Loop: pulsing heartbeat scale                    |
+| `blink(el)`               | `tw-blink`               | Loop: blinking animation                         |
+| `wave(el)`                | `tw-wave`                | Loop: emoji/text waving motion                   |
+| `sway(el)`                | `tw-sway`                | Loop: slow side-to-side sway                     |
+| `floating(el)`            | `tw-floating`            | Loop: smooth up-and-down motion                  |
+| `glitch(el)`              | `tw-glitch`              | Special: jittery glitch animation                |
+| `neonGlow(el)`            | `tw-neonGlow`            | Special: pulsing neon glow                       |
+| `shimmer(el)`             | `tw-shimmer`             | Special: animated shimmer loading effect         |
+| `typingEffect(el)`        | `tw-typingEffect`        | Special: text typing with blinking cursor        |
+| `revealUp(el)`            | `tw-revealUp`            | Utility: fades in while sliding upward           |
+| `revealDown(el)`          | `tw-revealDown`          | Utility: fades in while sliding downward         |
+| `collapse(el)`            | `tw-collapse`            | Utility: collapses height to 0                   |
+| `expand(el)`              | `tw-expand`              | Utility: expands height from 0                   |
+| `fadeSlide(el)`           | `tw-fadeSlide`           | Utility: fade in + slide combo                   |
+| `bounceIn(el)`            | `tw-bounceIn`            | Utility: animated bounce in                      |
+| `bounceOut(el)`           | `tw-bounceOut`           | Utility: animated bounce out                     |
+| `scaleReveal(el)`         | `tw-scaleReveal`         | Utility: reveal from scaled center               |
+| `rotateYFlipCard(el)`     | `tw-rotate-y-flip-card`  | Utility: 3D card flip on hover                   |
+| `flipInX(el)`             | `tw-flipInX`             | Entrance: flips in along X-axis                  |
+| `flipOutX(el)`            | `tw-flipOutX`            | Exit: flips out along X-axis                     |
+| `flipInY(el)`             | `tw-flipInY`             | Entrance: flips in along Y-axis                  |
+| `flipOutY(el)`            | `tw-flipOutY`            | Exit: flips out along Y-axis                     |
+| `rotateIn(el)`            | `tw-rotateIn`            | Entrance: rotates in                             |
+| `rotateOut(el)`           | `tw-rotateOut`           | Exit: rotates out                                |
+| `rollIn(el)`              | `tw-rollIn`              | Entrance: rolls in                               |
+| `rollOut(el)`             | `tw-rollOut`             | Exit: rolls out                                  |
+| `lightSpeedIn(el)`        | `tw-lightSpeedIn`        | Entrance: fast skewed slide in                   |
+| `lightSpeedOut(el)`       | `tw-lightSpeedOut`       | Exit: fast skewed slide out                      |
+| `jackInTheBox(el)`        | `tw-jackInTheBox`        | Entrance: rotate + scale bounce in               |
+| `glowPulse(el)`           | `tw-glow-pulse`          | Loop: glowing pulse with scale/rotation          |
+| `sparkle(el)`             | `tw-sparkle`             | Loop: floating sparkle dot                       |
+| `teleport(el)`            | `tw-teleport`            | Utility: rapid vanish + reappear in patterns     |
+| `curtain(el)`             | `tw-curtain`             | Entrance: horizontal curtain reveal              |
+| `mirror(el)`              | `tw-mirror`              | Loop: mirror flipping animation                  |
+| `aura(el)`                | `tw-aura`                | Loop: glowing cyan aura effect                   |
+| `dust(el)`                | `tw-dust`                | Exit: float up, fade, scale out                  |
+| `zigzag(el)`              | `tw-zigzag`              | Loop: side-to-side zigzag motion                 |
+| `orbit(el)`               | `tw-orbit`               | Loop: object rotates around a center             |
+| `popUpSpin(el)`           | `tw-popup-spin`          | Entrance: scale + spin popup                     |
+| `Snap(el)`                | `tw-thanos-snap`         | Exit: dusty vanish with blur and clip effect     |
+| `UpsideDown(el)`          | `tw-upside-down`         | Turns the object upside down                     |
+| `HoverPop(el)`            | `tw-hover-pop`           | Hover: pop animation                             |
+| `HoverShrink(el)`         | `tw-hover-shrink`        | Hover: slight shrink                             |
+| `HoverEnlarge(el)`        | `tw-hover-enlarge`       | Hover: slight enlarge                            |
+| `HoverShake(el)`          | `tw-hover-shake`         | Hover: left-right shake                          |
+| `HoverFade(el)`           | `tw-hover-fade`          | Hover: reduce opacity                            |
+| `HoverGlow(el)`           | `tw-hover-glow`          | Hover: glowing box-shadow                        |
+| `HoverShadow(el)`         | `tw-hover-shadow`        | Hover: grows in shadow intensity                 |
+| `hoverBlur(el)`           | `tw-hover-Blur`          | Hover: applies blur on hover                     |
+| `hoverRotate(el)`         | `tw-hover-Rotate`        | Hover: rotates slightly                          |
+| `hoverUnderlineLeft(el)`  | `tw-hover-UnderlineLeft` | Hover: underline grows from left                 |
+| `hoverUnderlineRight(el)` | `tw-hover-UnderlineRight`| Hover: underline grows from right                |
+| `hoverBorderGlow(el)`     | `tw-hover-BorderGlow`    | Hover: border glow effect                        |
+| `hoverScaleBounce(el)`    | `tw-hover-ScaleBounce`   | Hover: bouncy scaling effect                     |
+| `hoverTilt(el)`           | `tw-hover-Tilt`          | Hover: slight tilt effect                        |
+| `HoverUpsideDown(el)`     | `tw-hover-upsidedown`    | Hover: Turns the object upside down              |
+| `HoverTeleport(el)`       | `tw-hover-teleport`      | Hover: Teleports the object on hover             |
+| `ColorCycle(el)`          | `tw-color-cycle`         | Color: cycles through multiple color themes      |
+| `BlackRed(el)`            | `tw-black-red`           | Color: black background with red text            |
+| `BlackBlue(el)`           | `tw-black-blue`          | Color: black background with blue text           |
+| `BlackGreen(el)`          | `tw-black-green`         | Color: black background with green text          |
+| `BlackPurple(el)`         | `tw-black-purple`        | Color: black background with purple text         |
+| `BlackYellow(el)`         | `tw-black-yellow`        | Color: black background with yellow text         |
+| `BlackWhite(el)`          | `tw-black-white`         | Color: black background with white text          |
+| `BlackOrange(el)`         | `tw-black-orange`        | Color: black background with orange text         |
+| `BlackPink(el)`           | `tw-black-pink`          | Color: black background with pink text           |
+| `BlackGray(el)`           | `tw-black-gray`          | Color: black background with gray text           |
+| `BlackCyan(el)`           | `tw-black-cyan`          | Color: black background with cyan text           |
+| `BlackBrown(el)`          | `tw-black-brown`         | Color: black background with brown text          |
+| `BlackGold(el)`           | `tw-black-gold`          | Color: black background with gold text           |
+| `BlackSilver(el)`         | `tw-black-silver`        | Color: black background with silver text         |
+| `BlackMagenta(el)`        | `tw-black-magenta`       | Color: black background with magenta text        |
+| `BlueYellow(el)`          | `tw-blue-yellow`         | Color: blue background with yellow text          |
+| `DarkGreenLime(el)`       | `tw-dark-green-lime`     | Color: dark green background with lime text      |
+| `PurpleOrange(el)`        | `tw-purple-orange`       | Color: purple background with orange text        |
+| `IndigoPink(el)`          | `tw-indigo-pink`         | Color: indigo background with pink text          |
+| `GrayCyan(el)`            | `tw-gray-cyan`           | Color: gray background with cyan text            |
+| `DarkBlueWhite(el)`       | `tw-dark-blue-white`     | Color: dark blue background with white text      |
+| `TealSalmon(el)`          | `tw-teal-salmon`         | Color: teal background with salmon text          |
+| `OliveViolet(el)`         | `tw-olive-violet`        | Color: olive background with violet text         |
+| `BrownSkyBlue(el)`        | `tw-brown-sky-blue`      | Color: brown background with sky blue text       |
+| `MidnightGreenMint(el)`   | `tw-midnight-green-mint` | Color: midnight green background with mint text  |
+| `CrimsonLemon(el)`        | `tw-crimson-lemon`       | Color: crimson background with lemon text        |
+| `SlatePeach(el)`          | `tw-slate-peach`         | Color: slate background with peach text          |
+| `CharcoalLavender(el)`    | `tw-charcoal-lavender`   | Color: charcoal background with lavender text    |
+| `MaroonMint(el)`          | `tw-maroon-mint`         | Color: maroon background with mint text          |
+| `DarkCyanGold(el)`        | `tw-dark-cyan-gold`      | Color: dark cyan background with gold text       |
+| `DeepPurpleIvory(el)`     | `tw-deep-purple-ivory`   | Color: deep purple background with ivory text    |
+| `ForestPink(el)`          | `tw-forest-pink`         | Color: forest green background with pink text    |
+| `SteelRose(el)`           | `tw-steel-rose`          | Color: steel background with rose text           |
+| `EggplantSun(el)`         | `tw-eggplant-sun`        | Color: eggplant background with sun-yellow text  |
 
 All animations accept an optional duration parameter (in milliseconds).
-
----
-
-## 🔍 How It Works
-
-- Minimal CSS is injected automatically only once using a helper function.
-- You call `fadeIn(el)` or `slideUp(el)` from your JS code.
-- The function:
-  - Injects CSS if not already injected.
-  - Applies the utility class (e.g., `tw-fade-in`) to the element.
-  - Optionally sets `animation-duration` based on your parameter.
-
----
-
-## 📦 Local Development & Testing
-
-### Method 1: Pack & Install Locally
-
-```bash
-npm pack
-```
-
-This will generate a `.tgz` file. Then in another project:
-
-```bash
-npm install /path/to/ani-js.tgz
-```
-
-### Method 2: Link for Live Development
-
-```bash
-# Inside your library folder
-npm link
-
-# Inside your test project
-npm ani-js
-```
 
 ---
