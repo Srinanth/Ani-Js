@@ -54,7 +54,7 @@ yarn add ani-js
 > - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/index.js), [UNPKG](https://app.unpkg.com/ani-js@1.4.0/files/index.js)) that 
 > supports **ES Modules**
 > - To use as classes in Html use stylesheets as [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css)
-> for React Import the package then in your App.jsx or Main.jsx import the classes from "../node_modules/ani-js/ani-js.css" set it as global so you can use it anywhere.
+> - For React Import the package then in your App.jsx or Main.jsx import the classes from "../node_modules/ani-js/ani-js.css" set it as global so you can use it anywhere.
 > Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
 
 ---

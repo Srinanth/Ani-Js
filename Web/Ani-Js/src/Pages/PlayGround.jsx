@@ -1,6 +1,6 @@
 import { useEffect, useRef,useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiHome, FiPlay, FiSettings, FiBook } from 'react-icons/fi';
+import { FiHome, FiPlay, FiSettings, FiBook,FiCode, FiMonitor   } from 'react-icons/fi';
 import Background from '../assets/Background.png';
 
 export default function PlayGroundPage() {
@@ -103,8 +103,10 @@ export default function PlayGroundPage() {
           </div>
         </div>
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 p-6 pt-15">
-        <div className="bg-black/70 p-4 rounded-xl backdrop-blur-sm">
-          <h2 className="text-xl font-bold mb-4 text-blue-300">✍️ Code Editor</h2>
+        <div className="p-4">
+         <h2 className="text-xl font-bold mb-4 text-blue-300 flex items-center gap-2">
+          <FiCode size={20} /> Code Editor
+         </h2>
           <textarea
             className="w-full h-[70vh] bg-blue-900/40 text-blue-100 p-4 rounded-lg border border-blue-800 resize-none font-mono text-sm"
             defaultValue={defaultCode}
@@ -112,8 +114,10 @@ export default function PlayGroundPage() {
           ></textarea>
         </div>
 
-        <div className="bg-black/70 p-4 rounded-xl backdrop-blur-sm">
-          <h2 className="text-xl font-bold mb-4 text-blue-300">📺 Output Preview</h2>
+        <div className="p-4">
+          <h2 className="text-xl font-bold mb-4 text-blue-300 flex items-center gap-2">
+           <FiMonitor size={20} /> Output Preview
+          </h2>
           <iframe
             ref={iframeRef}
             title="preview"

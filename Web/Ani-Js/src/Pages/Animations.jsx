@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import { FiHome, FiPlay, FiSettings, FiBook } from 'react-icons/fi';
+import { FiHome, FiPlay, FiSettings, FiBook,FiFilm } from 'react-icons/fi';
+
 import Background from '../assets/Background.png';
 
 export default function AnimationsPage() {
@@ -259,8 +260,10 @@ export default function AnimationsPage() {
       </div>
 
       <div className="relative z-10 py-16 px-6">
-        <div className="max-w-5xl mx-auto bg-black/70 backdrop-blur-sm p-10 rounded-xl">
-          <h1 className="text-4xl font-bold text-blue-400 mb-10 text-center">🎬 Available Animations</h1>
+        <div className="max-w-5xl mx-auto p-10">
+          <h1 className="text-4xl font-bold text-blue-400 mb-10 text-center flex items-center justify-center gap-2">
+                     <FiFilm size={32} /> Available Animations
+          </h1>
           
           {/* Navigation Links */}
           <div className="ani-scroll mb-12">
