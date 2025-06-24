@@ -59,8 +59,8 @@ useEffect(() => {
             <div className="flex space-x-8">
               <Link to="/" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Home</Link>
               <Link to="/usage" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Usage</Link>
-              <Link to="/playground" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Playground</Link>
               <Link to="/animations" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Animations</Link>
+              <Link to="/playground" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Playground</Link>
             </div>
           </div>
         </nav>
@@ -81,14 +81,15 @@ useEffect(() => {
                 <FiBook size={24} />
                 {mobileMenuOpen && <span className="ml-2">Usage</span>}
               </Link>
-              <Link to="/playground" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Playground">
-                <FiPlay size={24} />
-                {mobileMenuOpen && <span className="ml-2">Playground</span>}
-              </Link>
               <Link to="/animations" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Animations">
                 <FiSettings size={24} />
                 {mobileMenuOpen && <span className="ml-2">Animations</span>}
               </Link>
+              <Link to="/playground" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Playground">
+                <FiPlay size={24} />
+                {mobileMenuOpen && <span className="ml-2">Playground</span>}
+              </Link>
+
             </div>
           </div>
         </div>
