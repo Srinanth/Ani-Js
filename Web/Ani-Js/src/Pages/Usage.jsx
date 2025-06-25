@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { 
-  FiHome, 
-  FiPlay, 
-  FiSettings, 
+import {
+  FiHome,
+  FiPlay,
+  FiSettings,
   FiBook,
   FiTool,
   FiFileText,
@@ -26,7 +26,6 @@ export default function UsagePage() {
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
@@ -71,7 +70,7 @@ export default function UsagePage() {
           </div>
         </div>
       </nav>
-      
+
       {/* Mobile Sidebar */}
       <div className="md:hidden fixed right-0 top-1/2 transform -translate-y-1/2 z-50">
         <div
@@ -100,38 +99,40 @@ export default function UsagePage() {
         </div>
       </div>
 
-      <div className="relative z-10 py-16 px-6">
-        <div className="max-w-5xl mx-auto p-10">
+      {/* Main Content */}
+      <div className="relative z-10 py-12 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto p-4 sm:p-10">
           <h1 className="text-4xl font-bold text-blue-400 mb-10 text-center flex items-center justify-center gap-2">
             <FiBook size={32} /> Ani-Js Installation & Usage
           </h1>
 
+          {/* Installation */}
           <div className="ani-scroll">
-            {/* Installation Section */}
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 flex items-center gap-2">
               <FiTool size={24} /> Installation
             </h2>
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 flex-1 flex items-center">
-                <FaNpm className="mr-2 text-red-500" size={20} />
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 flex-1 w-full whitespace-pre-wrap break-words">
+                <FaNpm className="mr-2 text-red-500 inline" size={20} />
                 <code>npm install ani-js</code>
               </pre>
-              <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 flex-1 flex items-center">
-                <SiYarn className="mr-2 text-blue-400" size={20} />
+              <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 flex-1 w-full whitespace-pre-wrap break-words">
+                <SiYarn className="mr-2 text-blue-400 inline" size={20} />
                 <code>yarn add ani-js</code>
               </pre>
             </div>
           </div>
 
+          {/* Vanilla JS */}
           <div className="ani-scroll">
-            {/* Vanilla JS Usage */}
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 flex items-center gap-2">
               <FiFileText size={24} /> Usage - Vanilla JavaScript
             </h2>
+
             <h3 className="text-xl font-semibold text-blue-200 mb-2 flex items-center gap-2">
               <FiCode size={20} /> Function-based
             </h3>
-            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6">
+            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6 w-full whitespace-pre-wrap break-words">
               <code>{`<div id="box">Hello</div>
 <button id="btn">Animate</button>
 <script type="module">
@@ -147,21 +148,23 @@ export default function UsagePage() {
             <h3 className="text-xl font-semibold text-blue-200 mb-2 flex items-center gap-2">
               <FiCode size={20} /> Class-based
             </h3>
-            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6">
+            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6 w-full whitespace-pre-wrap break-words">
               <code>{`<div class="tw-fade-in">Hello</div>`}</code>
             </pre>
           </div>
 
-          {/* Plain HTML + CDN Usage */}
+          {/* Plain HTML + CDN */}
           <div className="ani-scroll">
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 flex items-center gap-2">
               <FiGlobe size={24} /> Plain HTML with CDN
             </h2>
-            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6">
+            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6 w-full whitespace-pre-wrap break-words">
               <code>{`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css" />
 <script type="module" src="https://cdn.jsdelivr.net/npm/ani-js@latest/index.js"></script>`}</code>
             </pre>
-            <p className="mb-6 text-blue-200">Now you can use class names like <code>tw-fade-in</code> directly in your HTML to animate elements.</p>
+            <p className="mb-6 text-blue-200 break-words">
+              Now you can use class names like <code className="break-words text-wrap">tw-fade-in</code> directly in your HTML to animate elements.
+            </p>
           </div>
 
           {/* React Usage */}
@@ -169,10 +172,11 @@ export default function UsagePage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-300 flex items-center gap-2">
               <FaReact size={24} className="text-blue-400" /> Usage - React
             </h2>
+
             <h3 className="text-xl font-semibold text-blue-200 mb-2 flex items-center gap-2">
               <FiCode size={20} /> Function-based
             </h3>
-            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6">
+            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6 w-full whitespace-pre-wrap break-words">
               <code>{`import { useEffect } from 'react';
 import { fadeIn } from 'ani-js';
 
@@ -185,7 +189,7 @@ useEffect(() => {
             <h3 className="text-xl font-semibold text-blue-200 mb-2 flex items-center gap-2">
               <FiCode size={20} /> Class-based
             </h3>
-            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6">
+            <pre className="bg-blue-900/50 p-4 rounded-lg text-blue-100 overflow-x-auto border border-blue-800 mb-6 w-full whitespace-pre-wrap break-words">
               <code>{`<div className="tw-fade-in">Hello</div>`}</code>
             </pre>
           </div>
@@ -194,19 +198,19 @@ useEffect(() => {
           <div className="bg-yellow-900/40 border border-yellow-700 text-yellow-200 p-4 rounded-lg mb-10 ani-scroll">
             <div className="flex items-start gap-2">
               <FiAlertTriangle size={24} className="flex-shrink-0 mt-1 text-yellow-400" />
-              <div>
+              <div className="break-words text-wrap">
                 <strong>Important:</strong> This example uses ES Module syntax (import) and will not work by directly opening the HTML file in a browser.<br /><br />
                 To run this successfully, you must:
                 <ul className="list-disc list-inside mt-2">
                   <li>Use a module-aware bundler or dev server such as Vite, Webpack, or Parcel</li>
                   <li>OR load ani-js from a CDN:<br />
-                    <a href="https://cdn.jsdelivr.net/npm/ani-js@latest/index.js" className="underline text-blue-300">jsDelivr (JS)</a> | 
+                    <a href="https://cdn.jsdelivr.net/npm/ani-js@latest/index.js" className="underline text-blue-300">jsDelivr (JS)</a> |{' '}
                     <a href="https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css" className="underline text-blue-300">jsDelivr (CSS)</a>
                   </li>
                 </ul>
                 <br />
-                For React, also import the CSS globally in your <code>App.jsx</code> or <code>Main.jsx</code>:
-                <pre className="bg-blue-900/50 text-blue-100 p-2 rounded mt-2 overflow-x-auto border border-blue-800">
+                For React, also import the CSS globally in your <code className="break-words">App.jsx</code> or <code>Main.jsx</code>:
+                <pre className="bg-blue-900/50 text-blue-100 p-2 rounded mt-2 overflow-x-auto border border-blue-800 w-full whitespace-pre-wrap break-words">
                   <code>import '../node_modules/ani-js/ani-js.css';</code>
                 </pre>
                 Set it as global so you can use it anywhere.<br /><br />
