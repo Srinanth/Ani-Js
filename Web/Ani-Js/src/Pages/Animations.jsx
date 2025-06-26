@@ -14,15 +14,15 @@ export default function AnimationsPage() {
   const demoBoxRef = useRef(null);
    const demoBoxContentRef = useRef(null);
 
-  const animationCategories = {
-    entrance: ['fadeIn', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomIn', 'bounceIn', 'flipInX', 'flipInY', 'rotateIn', 'rollIn', 'lightSpeedIn', 'jackInTheBox'],
-    exit: ['fadeOut', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomOut', 'bounceOut', 'flipOutX', 'flipOutY', 'rotateOut', 'rollOut', 'lightSpeedOut'],
+const animationCategories = {
+    entrance: ['fadeIn', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomIn', 'bounceIn', 'flipInX', 'flipInY', 'rotateIn', 'rollIn', 'lightSpeedIn', 'jackInTheBox', 'revealUp', 'revealDown', 'expand', 'fadeSlide', 'scaleReveal', 'Curtain'],
+    exit: ['fadeOut', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomOut', 'bounceOut', 'flipOutX', 'flipOutY', 'rotateOut', 'rollOut', 'lightSpeedOut', 'collapse', 'fadeSlide', 'Curtain'],
     attention: ['bounce', 'shake', 'pulse', 'flash', 'wobble', 'swing', 'tada', 'jello', 'heartbeat', 'blink', 'wave', 'sway'],
-    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'mirror', 'aura', 'dust', 'sparkle'],
-    transforms: ['scaleUp', 'scaleDown', 'enlarge', 'shrink', 'rotate', 'floating', 'zigzag', 'orbit', 'popUpSpin'],
+    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'mirror', 'aura', 'dust', 'sparkle', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap', 'typingEffect'],
+    transforms: ['scaleUp', 'scaleDown', 'enlarge', 'shrink', 'rotate', 'floating', 'zigzag', 'orbit', 'popUpSpin', 'Teleport', 'ZigZag', 'Orbit', 'PopUpSpin', 'rotateYFlipCard', 'UpsideDown'],
     hovers: ['HoverPop', 'HoverShrink', 'HoverEnlarge', 'HoverShake', 'HoverFade', 'HoverGlow', 'HoverShadow', 'hoverBlur', 'hoverRotate', 'hoverUnderlineLeft', 'hoverUnderlineRight', 'hoverBorderGlow', 'hoverScaleBounce', 'hoverTilt', 'HoverUpsideDown', 'HoverTeleport'],
     color: ['ColorCycle', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun']
-  };
+};
   const animationMap = {
     fadeIn: "tw-fade-in",
     fadeOut: "tw-fade-out",
