@@ -17,6 +17,14 @@
     "css",
     "utility"
   ],
+  "files": [
+    "index.js",
+    "css.js",
+    "ani-js.css",
+    "inject.js",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "Srinanth",
   "license": "ISC",
   "bugs": {

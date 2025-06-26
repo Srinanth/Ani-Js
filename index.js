@@ -123,6 +123,27 @@ const animations = {
   ForestPink: "tw-forest-pink",
   SteelRose: "tw-steel-rose",
   EggplantSun: "tw-eggplant-sun",
+
+  //new animations for testing 
+  fadeInUp: "tw-fade-in-up",
+  hinge: "tw-hinge",
+  stretchIn: "tw-stretch-in",
+  fadeOutUp: "tw-fade-out-up",
+  puffOut: "tw-puff-out",
+  vanishOut: "tw-vanish-out",
+  rubberBand: "tw-rubber-band",
+  wiggle: "tw-wiggle",
+  spin: "tw-spin",
+  frostedGlass: "tw-frosted-glass",
+  ripple: "tw-ripple",
+  hologram: "tw-hologram",
+  skew: "tw-skew",
+  warp: "tw-warp",
+  hoverSkew: "tw-hover-skew",
+  hoverJitter: "tw-hover-jitter",
+  rainbowFlow: "tw-rainbow-flow",
+  heatmap: "tw-heatmap",
+
 };
 
 const exports = {};
@@ -154,6 +175,26 @@ export const {
   BlueYellow,DarkGreenLime,PurpleOrange,IndigoPink,GrayCyan,DarkBlueWhite,
   TealSalmon,OliveViolet,BrownSkyBlue,MidnightGreenMint,CrimsonLemon,
   SlatePeach,CharcoalLavender,MaroonMint,DarkCyanGold,DeepPurpleIvory,
-  ForestPink,SteelRose,EggplantSun
+  ForestPink,SteelRose,EggplantSun,
+
+  //for testing 
+  fadeInUp,
+  hinge,
+  stretchIn,
+  fadeOutUp,
+  puffOut,
+  vanishOut,
+  rubberBand,
+  wiggle,
+  spin,
+  frostedGlass,
+  ripple,
+  hologram,
+  skew,
+  warp,
+  hoverSkew,
+  hoverJitter,
+  rainbowFlow,
+  heatmap,
 } = exports;
 

@@ -1046,3 +1046,128 @@
 .tw-midnight-green-mint {
   animation: twMidnightMint 1s linear infinite;
 }
+
+
+@keyframes twFadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.tw-fade-in-up { animation: twFadeInUp 0.6s ease-out; }
+
+
+@keyframes twHinge {
+  0% { transform: rotate(0); transform-origin: top left; }
+  100% { transform: rotate(80deg); opacity: 0; }
+}
+.tw-hinge { animation: twHinge 1s ease-in; }
+
+@keyframes twStretchIn {
+  0% { transform: scaleX(0.1) scaleY(0.1); opacity: 0; }
+  80% { transform: scaleX(1.1) scaleY(1.1); }
+  100% { transform: scaleX(1) scaleY(1); opacity: 1; }
+}
+.tw-stretch-in { animation: twStretchIn 0.7s ease-out; }
+
+@keyframes twFadeOutUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+.tw-fade-out-up { animation: twFadeOutUp 0.6s ease-in; }
+
+@keyframes twPuffOut {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.tw-puff-out { animation: twPuffOut 0.5s ease-out; }
+
+@keyframes twVanishOut {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+.tw-vanish-out { animation: twVanishOut 0.4s ease-in; }
+
+@keyframes twRubberBand {
+  0% { transform: scaleX(1); }
+  30% { transform: scaleX(1.25) scaleY(0.75); }
+  60% { transform: scaleX(0.85) scaleY(1.15); }
+  100% { transform: scaleX(1) scaleY(1); }
+}
+.tw-rubber-band { animation: twRubberBand 0.8s ease; }
+
+@keyframes twWiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.tw-wiggle { animation: twWiggle 0.6s ease-in-out infinite; }
+
+
+@keyframes twSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.tw-spin { animation: twSpin 1.5s linear infinite; }
+
+@keyframes twFrostedGlass {
+  0% { backdrop-filter: blur(0); opacity: 1; }
+  100% { backdrop-filter: blur(10px); opacity: 0.8; }
+}
+.tw-frosted-glass { animation: twFrostedGlass 1.2s ease-in-out alternate infinite; }
+
+@keyframes twRipple {
+  0% { box-shadow: 0 0 0 0 rgba(0, 150, 255, 0.7); }
+  100% { box-shadow: 0 0 0 20px rgba(0, 150, 255, 0); }
+}
+.tw-ripple { animation: twRipple 1.5s ease-out infinite; }
+
+@keyframes twHologram {
+  0%, 100% { opacity: 0.8; filter: hue-rotate(0); }
+  20% { opacity: 0.6; filter: hue-rotate(60deg); }
+  40% { opacity: 0.9; filter: hue-rotate(120deg); }
+}
+.tw-hologram { animation: twHologram 3s linear infinite; }
+
+@keyframes twSkew {
+  0%, 100% { transform: skewX(0deg); }
+  50% { transform: skewX(15deg); }
+}
+.tw-skew { animation: twSkew 1s ease-in-out infinite; }
+
+@keyframes twWarp {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+}
+.tw-warp { animation: twWarp 2s ease-in-out infinite; }
+
+
+@keyframes twHoverSkew {
+  0% { transform: skewX(0deg); }
+  100% { transform: skewX(10deg); }
+}
+.tw-hover-skew:hover { animation: twHoverSkew 0.3s ease-out forwards; }
+
+
+@keyframes twHoverJitter {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+.tw-hover-jitter:hover { animation: twHoverJitter 0.2s linear infinite; }
+
+@keyframes twRainbowFlow {
+  0% { background: #ff0000; }
+  16% { background: #ffff00; }
+  33% { background: #00ff00; }
+  50% { background: #00ffff; }
+  66% { background: #0000ff; }
+  83% { background: #ff00ff; }
+  100% { background: #ff0000; }
+}
+.tw-rainbow-flow { animation: twRainbowFlow 8s linear infinite; }
+
+@keyframes twHeatmap {
+  0% { background: #ff0000; }
+  50% { background: #0000ff; }
+  100% { background: #ff0000; }
+}
+.tw-heatmap { animation: twHeatmap 4s ease-in-out infinite; }
+
