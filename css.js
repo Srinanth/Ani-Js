@@ -1172,4 +1172,71 @@ export const animationsCSS = `
 .tw-heatmap { animation: twHeatmap 4s ease-in-out infinite; }
 
 
+@keyframes twloadcomplete {
+  0% { stroke-dashoffset: 100; transform: scale(0.8); }
+  50% { transform: scale(1.1); }
+  100% { stroke-dashoffset: 0; transform: scale(1); }
+}
+.tw-load-complete {
+  animation: twloadcomplete 0.6s ease-out forwards;
+}
+  @keyframes twscrollreveal {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tw-scroll-reveal {
+  animation: twscrollreveal 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tw-scroll-reveal {
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+  }
+}
+  @keyframes twtypewriter {
+  from { width: 0 }
+  to { width: 100% }
+}
+  @keyframes twblinkcaret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+.tw-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid; /* Cursor */
+  animation: 
+    twtypewriter 3s steps(40) forwards,
+    twblinkcaret 0.75s step-end infinite;
+}
+
+@keyframes twtextgradientshift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.tw-text-gradient-shift {
+  background: linear-gradient(90deg, #ff0000, #ff00ff, #0000ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: twtextgradientshift 3s linear infinite;
+}
+
+@keyframes twcolorpulse {
+  0%, 100% { color: inherit; }
+  50% { color: #4CAF50; }
+}
+.tw-color-pulse {
+  animation: twcolorpulse 3s ease infinite;
+}
+@keyframes twletterspace {
+  0%, 100% { letter-spacing: normal; }
+  50% { letter-spacing: 2px; }
+}
+.tw-letter-space {
+  animation: twletterspace 3s ease infinite;
+}
+  
 `;

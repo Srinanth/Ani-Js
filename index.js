@@ -143,6 +143,13 @@ const animations = {
   hoverJitter: "tw-hover-jitter",
   rainbowFlow: "tw-rainbow-flow",
   heatmap: "tw-heatmap",
+  checkboxCheck: "tw-checkbox-check",
+  loadComplete: "tw-load-complete",
+  scrollReveal: "tw-scroll-reveal",
+  typewriter: "tw-typewriter",
+  textGradientShift: "tw-text-gradient-shift",
+  ColorPulse:"tw-color-pulse",
+  letterSpace:"tw-letter-space",
 
 };
 
@@ -196,5 +203,12 @@ export const {
   hoverJitter,
   rainbowFlow,
   heatmap,
+  loadComplete,
+  scrollReveal,
+  typewriter,
+  textGradientShift,
+  ColorPulse,
+  letterSpace,
+
 } = exports;
 
