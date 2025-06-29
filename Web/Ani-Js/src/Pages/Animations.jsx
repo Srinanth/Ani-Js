@@ -17,11 +17,11 @@ export default function AnimationsPage() {
 const animationCategories = {
     entrance: ['fadeIn', 'slideUp','hinge','stretchIn','fadeInUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomIn', 'bounceIn', 'flipInX', 'flipInY', 'rotateIn', 'rollIn', 'lightSpeedIn', 'jackInTheBox', 'revealUp', 'revealDown', 'expand', 'fadeSlide', 'scaleReveal', 'Curtain'],
     exit: ['fadeOut', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomOut', 'bounceOut', 'flipOutX', 'flipOutY', 'rotateOut', 'rollOut', 'lightSpeedOut', 'collapse', 'fadeSlide', 'Curtain','fadeOutUp','puffOut','vanishOut'],
-    attention: ['bounce', 'shake', 'pulse', 'flash', 'wobble', 'swing', 'tada', 'jello', 'heartbeat', 'blink', 'wave', 'sway','rubberBand','wiggle','spin'],
-    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap','frostedGlass','ripple','hologram'],
+    attention: ['bounce', 'shake', 'pulse', 'flash', 'wobble', 'swing', 'tada', 'jello', 'heartbeat', 'blink', 'wave', 'sway','rubberBand','wiggle','spin','liquidDrip','MagneticPull','PaperFold','PixelGlitch','Smoke','Flare','InkSpread'],
+    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap','frostedGlass','ripple','hologram','loadComplete','scrollReveal','typewriter', 'letterSpace'],
     transforms: ['scaleUp', 'scaleDown', 'enlarge', 'shrink', 'rotate', 'floating', 'Teleport', 'ZigZag', 'Orbit', 'PopUpSpin', 'UpsideDown','skew','warp'],
     hovers: ['HoverPop', 'HoverShrink', 'HoverEnlarge', 'HoverShake', 'HoverFade', 'HoverGlow', 'HoverShadow', 'hoverBlur', 'hoverRotate', 'hoverUnderlineLeft', 'hoverUnderlineRight', 'hoverBorderGlow', 'hoverScaleBounce', 'hoverTilt', 'HoverUpsideDown', 'HoverTeleport','hoverSkew','hoverJitter'],
-    color: ['ColorCycle', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun','rainbowFlow','heatmap']
+    color: ['ColorCycle', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun','rainbowFlow','heatmap','textGradientShift','ColorPulse','Neonflicker'],
 };
   const animationMap = {
     fadeIn: "tw-fade-in",
@@ -154,6 +154,20 @@ const animationCategories = {
     hoverJitter: "tw-hover-jitter",
     rainbowFlow: "tw-rainbow-flow",
     heatmap: "tw-heatmap",
+    loadComplete: "tw-load-complete",
+    scrollReveal: "tw-scroll-reveal",
+    typewriter: "tw-typewriter",
+    letterSpace:"tw-letter-space",
+    textGradientShift: "tw-text-gradient-shift",
+    ColorPulse:"tw-color-pulse",
+    Neonflicker:"tw-neon-flicker",
+    liquidDrip:"tw-liquid-drip",
+    MagneticPull:"tw-magnetic",
+    PaperFold:"tw-paper-fold",
+    PixelGlitch:"tw-glitch-pixel",
+    Smoke:"tw-smoke-out",
+    Flare:"tw-lens-flare",
+    InkSpread:"tw-ink-reveal",
   };
 
   useEffect(() => {
