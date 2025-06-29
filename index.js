@@ -90,7 +90,7 @@ const animations = {
   typewriter: "tw-typewriter",
   letterSpace:"tw-letter-space",
 
-  
+
   HoverPop: "tw-hoverpop",
   HoverShrink: "tw-hovershrink",
   HoverEnlarge: "tw-hoverenlarge",
@@ -151,11 +151,14 @@ const animations = {
   ColorPulse:"tw-color-pulse",
   //new animations for testing 
   
-  
-  
-  
-  
-
+  Neonflicker:"tw-neon-flicker",
+  liquidDrip:"tw-liquid-drip",
+  MagneticPull:"tw-magnetic",
+  PaperFold:"tw-paper-fold",
+  PixelGlitch:"tw-glitch",
+  Smoke:"tw-smoke-out",
+  Flare:"tw-lens-flare",
+  InkSpread:"tw-ink-reveal",
 };
 
 const exports = {};
@@ -196,11 +199,14 @@ export const {
   //for testing 
   
   
-  
-  
- 
- 
- 
+  Neonflicker,
+  liquidDrip,
+  MagneticPull,
+  PaperFold,
+  PixelGlitch,
+  Smoke,
+  Flare,
+  InkSpread,
 
 } = exports;
 
