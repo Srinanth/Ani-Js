@@ -155,7 +155,7 @@ const animations = {
   liquidDrip:"tw-liquid-drip",
   MagneticPull:"tw-magnetic",
   PaperFold:"tw-paper-fold",
-  PixelGlitch:"tw-glitch",
+  PixelGlitch:"tw-glitch-pixel",
   Smoke:"tw-smoke-out",
   Flare:"tw-lens-flare",
   InkSpread:"tw-ink-reveal",

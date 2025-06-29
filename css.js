@@ -1303,7 +1303,7 @@ export const animationsCSS = `
   90% { clip-path: inset(10% 0 60% 0); }
   100% { clip-path: inset(0 0 50% 0); }
 }
-.tw-glitch {
+.tw-glitch-pixel {
   animation: tw-glitch 2s linear infinite alternate;
 }
 
