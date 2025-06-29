@@ -71,7 +71,26 @@ const animations = {
   PopUpSpin: "tw-popup-spin",
   Snap:"tw-thanos-snap",
   UpsideDown: "tw-upside-down",
+  fadeInUp: "tw-fade-in-up",
+  hinge: "tw-hinge",
+  stretchIn: "tw-stretch-in",
+  fadeOutUp: "tw-fade-out-up",
+  puffOut: "tw-puff-out",
+  vanishOut: "tw-vanish-out",
+  rubberBand: "tw-rubber-band",
+  wiggle: "tw-wiggle",
+  spin: "tw-spin",
+  frostedGlass: "tw-frosted-glass",
+  ripple: "tw-ripple",
+  hologram: "tw-hologram",
+  skew: "tw-skew",
+  warp: "tw-warp",
+  loadComplete: "tw-load-complete",
+  scrollReveal: "tw-scroll-reveal",
+  typewriter: "tw-typewriter",
+  letterSpace:"tw-letter-space",
 
+  
   HoverPop: "tw-hoverpop",
   HoverShrink: "tw-hovershrink",
   HoverEnlarge: "tw-hoverenlarge",
@@ -88,6 +107,9 @@ const animations = {
   hoverTilt: "tw-hover-tilt",
   HoverUpsideDown: "tw-hover-upsidedown",
   HoverTeleport: "tw-hover-teleport",
+  hoverSkew: "tw-hover-skew",
+  hoverJitter: "tw-hover-jitter",
+
 
   ColorCycle: "tw-color-cycle",
   BlackRed: "tw-black-red",
@@ -123,33 +145,16 @@ const animations = {
   ForestPink: "tw-forest-pink",
   SteelRose: "tw-steel-rose",
   EggplantSun: "tw-eggplant-sun",
-
-  //new animations for testing 
-  fadeInUp: "tw-fade-in-up",
-  hinge: "tw-hinge",
-  stretchIn: "tw-stretch-in",
-  fadeOutUp: "tw-fade-out-up",
-  puffOut: "tw-puff-out",
-  vanishOut: "tw-vanish-out",
-  rubberBand: "tw-rubber-band",
-  wiggle: "tw-wiggle",
-  spin: "tw-spin",
-  frostedGlass: "tw-frosted-glass",
-  ripple: "tw-ripple",
-  hologram: "tw-hologram",
-  skew: "tw-skew",
-  warp: "tw-warp",
-  hoverSkew: "tw-hover-skew",
-  hoverJitter: "tw-hover-jitter",
   rainbowFlow: "tw-rainbow-flow",
   heatmap: "tw-heatmap",
-  checkboxCheck: "tw-checkbox-check",
-  loadComplete: "tw-load-complete",
-  scrollReveal: "tw-scroll-reveal",
-  typewriter: "tw-typewriter",
   textGradientShift: "tw-text-gradient-shift",
   ColorPulse:"tw-color-pulse",
-  letterSpace:"tw-letter-space",
+  //new animations for testing 
+  
+  
+  
+  
+  
 
 };
 
@@ -170,11 +175,14 @@ export const {
   revealDown, collapse, expand, fadeSlide, bounceIn, bounceOut,
   scaleReveal, rotateYFlipCard, Glow, Shadow, GlowPulse, Sparkle,
   Teleport,Curtain,Mirror,Aura,Dust,ZigZag,Orbit,PopUpSpin,Snap,
-  UpsideDown,
+  UpsideDown,fadeInUp,hinge,stretchIn,fadeOutUp,puffOut,vanishOut,
+  rubberBand,wiggle,spin,frostedGlass,ripple,hologram,skew,warp,
+  loadComplete,scrollReveal,typewriter, letterSpace,
 
   HoverPop, HoverShrink, HoverEnlarge, HoverShake, HoverFade, HoverGlow,
   HoverShadow, hoverBlur, hoverRotate, hoverUnderlineLeft, hoverUnderlineRight, hoverBorderGlow,
-  hoverScaleBounce, hoverTilt,HoverUpsideDown,HoverTeleport,
+  hoverScaleBounce, hoverTilt,HoverUpsideDown,HoverTeleport,hoverJitter,hoverSkew,
+  
 
   ColorCycle, BlackRed,
   BlackBlue,BlackGreen,BlackPurple,BlackYellow, BlackWhite,BlackOrange,BlackPink,
@@ -182,33 +190,17 @@ export const {
   BlueYellow,DarkGreenLime,PurpleOrange,IndigoPink,GrayCyan,DarkBlueWhite,
   TealSalmon,OliveViolet,BrownSkyBlue,MidnightGreenMint,CrimsonLemon,
   SlatePeach,CharcoalLavender,MaroonMint,DarkCyanGold,DeepPurpleIvory,
-  ForestPink,SteelRose,EggplantSun,
+  ForestPink,SteelRose,EggplantSun,rainbowFlow,heatmap, textGradientShift,
+  ColorPulse,
 
   //for testing 
-  fadeInUp,
-  hinge,
-  stretchIn,
-  fadeOutUp,
-  puffOut,
-  vanishOut,
-  rubberBand,
-  wiggle,
-  spin,
-  frostedGlass,
-  ripple,
-  hologram,
-  skew,
-  warp,
-  hoverSkew,
-  hoverJitter,
-  rainbowFlow,
-  heatmap,
-  loadComplete,
-  scrollReveal,
-  typewriter,
-  textGradientShift,
-  ColorPulse,
-  letterSpace,
+  
+  
+  
+  
+ 
+ 
+ 
 
 } = exports;
 
