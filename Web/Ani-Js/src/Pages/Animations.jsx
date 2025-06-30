@@ -5,14 +5,11 @@ import { FiHome, FiPlay, FiSettings, FiBook,FiFilm } from 'react-icons/fi';
 import Background from '../assets/Background.png';
 
 export default function AnimationsPage() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [prevScroll, setPrevScroll] = useState(0);
   const [visible, setVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeAnimation, setActiveAnimation] = useState('tw-fade-in');
   const [activeSection, setActiveSection] = useState('entrance');
-  const [shouldPlayAnimation, setShouldPlayAnimation] = useState(false);
-  const demoBoxRef = useRef(null);
-   const demoBoxContentRef = useRef(null);
+  const [Animation, setAnimation] = useState(0);
 
 const animationCategories = {
     entrance: ['fadeIn', 'slideUp','hinge','stretchIn','fadeInUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomIn', 'bounceIn', 'flipInX', 'flipInY', 'rotateIn', 'rollIn', 'lightSpeedIn', 'jackInTheBox', 'revealUp', 'revealDown', 'expand', 'fadeSlide', 'scaleReveal', 'Curtain'],
@@ -173,13 +170,13 @@ const animationCategories = {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+      setVisible(prevScroll > currentScrollPos || currentScrollPos < 10);
+      setPrevScroll(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, [prevScroll]);
 
   useEffect(() => {
     const elements = document.querySelectorAll('.ani-scroll');
@@ -200,36 +197,19 @@ const animationCategories = {
     });
   }, []);
 
- const handleAnimationClick = (animationClass) => {
-    setShouldPlayAnimation(false);
-    if (demoBoxContentRef.current) {
-    Object.values(animationMap).forEach(animClass => {
-      demoBoxContentRef.current.classList.remove(animClass);
+  const handleAnimationClick = (animationClass, animName) => {
+    const newActiveAnimations = {};
+    Object.keys(animationMap).forEach(key => {
+      newActiveAnimations[key] = false;
     });
-  }
-
-    if (demoBoxRef.current) {
-      demoBoxRef.current.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'center' 
-      });
-      setTimeout(() => {
-        setActiveAnimation(animationClass);
-        setShouldPlayAnimation(true);
-      }, 1000);
-    } else {
-      setActiveAnimation(animationClass);
-      setShouldPlayAnimation(true);
-    }
+    newActiveAnimations[animName] = true;
+    setAnimation(newActiveAnimations);
+    setTimeout(() => {
+      setAnimation(prev => ({...prev, [animName]: false}));
+    }, 3500);
   };
 
-  useEffect(() => {
-    if (shouldPlayAnimation && demoBoxContentRef.current) {
-      void demoBoxContentRef.current.offsetWidth;
-      demoBoxContentRef.current.classList.add(activeAnimation);
-    }
-  }, [shouldPlayAnimation, activeAnimation]);
-
+  
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -292,7 +272,7 @@ const animationCategories = {
       <div className="relative z-10 py-16 px-6">
         <div className="max-w-5xl mx-auto p-10">
           <h1 className="text-4xl font-bold text-blue-400 mb-10 text-center flex items-center justify-center gap-2">
-                     <FiFilm size={32} /> Available Animations
+            <FiFilm size={32} /> Available Animations
           </h1>
           
           {/* Navigation Links */}
@@ -344,19 +324,6 @@ const animationCategories = {
             </div>
           </div>
 
-          {/* Demo Box */}
-         <div ref={demoBoxRef} className="ani-scroll mb-12">
-            <div 
-              ref={demoBoxContentRef}
-              className={`w-full h-40 bg-blue-900/50 rounded-lg flex items-center justify-center text-xl mb-4 ${shouldPlayAnimation ? activeAnimation : ''}`}
-            >
-              Animation Preview
-            </div>
-            <div className="text-center text-blue-300 mb-6">
-              Current Animation: <span className="font-mono bg-blue-900/50 px-2 py-1 rounded">{activeAnimation}</span>
-            </div>
-          </div>
-
           {/* Animation Sections */}
           <div className="space-y-16">
             {/* Entrance Animations */}
@@ -365,12 +332,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.entrance.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -383,12 +350,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.exit.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -401,12 +368,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.attention.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -419,12 +386,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.effects.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -437,12 +404,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.transforms.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -455,24 +422,17 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.hovers.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                        <button 
-                        onMouseEnter={() => {
-                            if (!shouldPlayAnimation) {
-                            demoBoxContentRef.current.classList.remove(activeAnimation);
-                            demoBoxContentRef.current.classList.add(animationMap[anim]);
-                            }
-                        }}
-                        onMouseLeave={() => {
-                            if (!shouldPlayAnimation) {
-                            demoBoxContentRef.current.classList.remove(animationMap[anim]);
-                            demoBoxContentRef.current.classList.add('tw-fade-in');
-                            }
-                        }}
-                        onClick={() => handleAnimationClick(animationMap[anim])}
-                        className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
-                        >
-                        {anim}
-                        </button>
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer tw-hoverenlarge ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onMouseEnter={() => {
+                        if (!Animation[anim]) {
+                          handleAnimationClick(animationMap[anim], anim);
+                        }
+                      }}
+                    >
+                      {anim}
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
@@ -485,12 +445,12 @@ const animationCategories = {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {animationCategories.color.map(anim => (
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
-                    <button 
-                      onClick={() => handleAnimationClick(animationMap[anim])}
-                      className="w-full bg-blue-800 hover:bg-blue-700 text-blue-100 py-2 px-4 rounded mb-2 transition tw-hoverenlarge"
+                    <div 
+                      className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
+                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
                     >
                       {anim}
-                    </button>
+                    </div>
                     <div className="text-sm text-blue-300 font-mono">{animationMap[anim]}</div>
                   </div>
                 ))}
