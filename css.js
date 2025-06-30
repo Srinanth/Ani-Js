@@ -1334,4 +1334,108 @@ export const animationsCSS = `
   animation: tw-ink-spread 2s ease-out forwards;
 }
   
+
+@keyframes tw-pulse-morph {
+  0% { 
+    transform: scale(1);
+    background-color: #ff4d4d;
+  }
+  50% { 
+    transform: scale(1.2);
+    background-color: #4d79ff;
+  }
+  100% { 
+    transform: scale(1);
+    background-color: #ff4d4d;
+  }
+}
+.tw-pulse-morph {
+  animation: tw-pulse-morph 3s ease infinite;
+}
+
+@keyframes tw-gradient-wave {
+  0%, 100% { 
+    transform: scale(1);
+    background: linear-gradient(90deg, #ff4d4d, #ff9a4d);
+  }
+  50% { 
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #4d79ff, #4dffb8);
+  }
+}
+.tw-gradient-wave {
+  animation: tw-gradient-wave 4s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes tw-color-expand {
+  0% { 
+    width: 100px;
+    background-color: #ff4d4d;
+  }
+  50% { 
+    width: 200px;
+    background-color: #4d79ff;
+  }
+  100% { 
+    width: 100px;
+    background-color: #ff9a4d;
+  }
+}
+.tw-color-expand {
+  height: 50px;
+  animation: tw-color-expand 3s ease infinite;
+}
+
+@keyframes tw-hue-scale {
+  0% { 
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  100% { 
+    transform: scale(1.5);
+    filter: hue-rotate(360deg);
+  }
+}
+.tw-hue-scale {
+  animation: tw-hue-scale 4s alternate infinite;
+}
+
+@keyframes tw-bounce-color {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    background-color: #ff4d4d;
+  }
+  25% { 
+    transform: translateY(-50px) scale(1.2);
+    background-color: #4d79ff;
+  }
+  75% { 
+    transform: translateY(25px) scale(0.8);
+    background-color: #9a4dff;
+  }
+}
+.tw-bounce-color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: tw-bounce-color 2s ease infinite;
+}
+
+@keyframes tw-color-pop {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: scale(1);
+  }
+  40% { 
+    transform: scale(1.5);
+    background-color: #4d79ff;
+  }
+  60% { 
+    transform: scale(0.8);
+    background-color: #9a4dff;
+  }
+}
+.tw-color-pop {
+  animation: tw-color-pop 3s ease infinite;
+}
 `;
