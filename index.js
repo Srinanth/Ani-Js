@@ -159,6 +159,12 @@ const animations = {
   Smoke:"tw-smoke-out",
   Flare:"tw-lens-flare",
   InkSpread:"tw-ink-reveal",
+  PulseMorph:"tw-pulse-morph",
+  GradientWave:"tw-gradient-wave",
+  ColorExpand:"tw-color-expand",
+  RotateHue:"tw-hue-scale",
+  ColorBounceBalls:"tw-bounce-color",
+  ColorPop:"tw-color-pop",
 };
 
 const exports = {};
@@ -206,7 +212,7 @@ export const {
   PixelGlitch,
   Smoke,
   Flare,
-  InkSpread,
+  InkSpread,PulseMorph,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,ColorPop,
 
 } = exports;
 
