@@ -18,7 +18,7 @@ const animationCategories = {
     effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap','frostedGlass','ripple','hologram','loadComplete','scrollReveal','typewriter', 'letterSpace'],
     transforms: ['scaleUp', 'scaleDown', 'enlarge', 'shrink', 'rotate', 'floating', 'Teleport', 'ZigZag', 'Orbit', 'PopUpSpin', 'UpsideDown','skew','warp'],
     hovers: ['HoverPop', 'HoverShrink', 'HoverEnlarge', 'HoverShake', 'HoverFade', 'HoverGlow', 'HoverShadow', 'hoverBlur', 'hoverRotate', 'hoverUnderlineLeft', 'hoverUnderlineRight', 'hoverBorderGlow', 'hoverScaleBounce', 'hoverTilt', 'HoverUpsideDown', 'HoverTeleport','hoverSkew','hoverJitter'],
-    color: ['ColorCycle', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun','rainbowFlow','heatmap','textGradientShift','ColorPulse','Neonflicker'],
+    color: ['ColorCycle', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun','rainbowFlow','heatmap','textGradientShift','ColorPulse','Neonflicker','PulseMorph','GradientWave','ColorExpand','RotateHue','ColorBounceBalls','ColorPop',],
 };
   const animationMap = {
     fadeIn: "tw-fade-in",
@@ -165,6 +165,12 @@ const animationCategories = {
     Smoke:"tw-smoke-out",
     Flare:"tw-lens-flare",
     InkSpread:"tw-ink-reveal",
+    PulseMorph:"tw-pulse-morph",
+    GradientWave:"tw-gradient-wave",
+    ColorExpand:"tw-color-expand",
+    RotateHue:"tw-hue-scale",
+    ColorBounceBalls:"tw-bounce-color",
+    ColorPop:"tw-color-pop",
   };
 
   useEffect(() => {
