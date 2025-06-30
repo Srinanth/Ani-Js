@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import { FiHome, FiPlay, FiSettings, FiBook,FiFilm } from 'react-icons/fi';
 
 import Background from '../assets/Background.png';
@@ -197,7 +197,7 @@ const animationCategories = {
     });
   }, []);
 
-  const handleAnimationClick = (animationClass, animName) => {
+  const handleAnimationClick = ( animName) => {
     const newActiveAnimations = {};
     Object.keys(animationMap).forEach(key => {
       newActiveAnimations[key] = false;
@@ -209,7 +209,7 @@ const animationCategories = {
     }, 3500);
   };
 
-  
+
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -334,7 +334,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
@@ -352,7 +352,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
@@ -370,7 +370,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
@@ -388,7 +388,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
@@ -406,7 +406,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
@@ -424,10 +424,10 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer tw-hoverenlarge ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                       onMouseEnter={() => {
                         if (!Animation[anim]) {
-                          handleAnimationClick(animationMap[anim], anim);
+                          handleAnimationClick( anim);
                         }
                       }}
                     >
@@ -447,7 +447,7 @@ const animationCategories = {
                   <div key={anim} className="bg-blue-900/30 p-4 rounded-lg">
                     <div 
                       className={`w-full h-20 bg-blue-800 rounded mb-2 flex items-center justify-center cursor-pointer ${Animation[anim] ? animationMap[anim] : ''}`}
-                      onClick={() => handleAnimationClick(animationMap[anim], anim)}
+                      onClick={() => handleAnimationClick( anim)}
                     >
                       {anim}
                     </div>
