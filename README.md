@@ -89,7 +89,7 @@ function MyComponent() {
 ## 📚 More Info
 
 For full **features**, **class names**,**playground**, **demos**, and **advanced usage**, visit the official website:  
-👉 [Ani-Js.com](https://ani-js.onrender.com/)
+👉 [Ani-Js.com](https://ani-js.vercel.app/)
 
 ⭐ If you find this project useful, consider [dropping a star](https://github.com/Srinanth/ani-js) on GitHub!
 
