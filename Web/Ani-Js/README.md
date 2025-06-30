@@ -14,7 +14,7 @@ Visit the Ani-Js official site to explore:
 - 🧪 Live Playground
 - 📘 CDN and module usage tips
 
-👉 **[Ani-Js.com](https://ani-js.onrender.com/)**
+👉 **[Ani-Js.com](https://ani-js.vercel.app/)**
 
 ---
 
