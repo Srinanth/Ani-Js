@@ -1438,4 +1438,40 @@ export const animationsCSS = `
 .tw-color-pop {
   animation: tw-color-pop 3s ease infinite;
 }
+
+@keyframes tw-liquid-metal {
+  0% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #a8a8a8, #e0e0e0);
+    box-shadow: 0 0 15px rgba(224, 224, 224, 0.8);
+  }
+  25% {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #e0e0e0, #a8a8a8);
+    filter: hue-rotate(45deg);
+  }
+  50% {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #c0c0c0, #d0d0d0);
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.9);
+  }
+  75% {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d0d0d0, #b0b0b0);
+    filter: hue-rotate(-45deg);
+  }
+  100% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #a8a8a8, #e0e0e0);
+    box-shadow: 0 0 15px rgba(224, 224, 224, 0.8);
+  }
+}
+
+.tw-liquid-metal {
+  animation: tw-liquid-metal 4s ease-in-out infinite;
+  border-radius: 8px;
+  padding: 20px;
+  display: inline-block;
+  background-size: 200% 200%;
+}
 `;
