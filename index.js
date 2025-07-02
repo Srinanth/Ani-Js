@@ -165,6 +165,7 @@ const animations = {
   RotateHue:"tw-hue-scale",
   ColorBounceBalls:"tw-bounce-color",
   ColorPop:"tw-color-pop",
+  LiquidMetal:"tw-liquid-metal",
 };
 
 const exports = {};
@@ -212,7 +213,7 @@ export const {
   PixelGlitch,
   Smoke,
   Flare,
-  InkSpread,PulseMorph,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,ColorPop,
+  InkSpread,PulseMorph,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,ColorPop,LiquidMetal,
 
 } = exports;
 
