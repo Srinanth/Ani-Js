@@ -187,7 +187,8 @@ export const {
   Teleport,Curtain,Mirror,Aura,Dust,ZigZag,Orbit,PopUpSpin,Snap,
   UpsideDown,fadeInUp,hinge,stretchIn,fadeOutUp,puffOut,vanishOut,
   rubberBand,wiggle,spin,frostedGlass,ripple,hologram,skew,warp,
-  loadComplete,scrollReveal,typewriter, letterSpace,
+  loadComplete,scrollReveal,typewriter, letterSpace,liquidDrip,
+  MagneticPull,PaperFold,PixelGlitch,Smoke,Flare,InkSpread,PulseMorph,
 
   HoverPop, HoverShrink, HoverEnlarge, HoverShake, HoverFade, HoverGlow,
   HoverShadow, hoverBlur, hoverRotate, hoverUnderlineLeft, hoverUnderlineRight, hoverBorderGlow,
@@ -201,19 +202,14 @@ export const {
   TealSalmon,OliveViolet,BrownSkyBlue,MidnightGreenMint,CrimsonLemon,
   SlatePeach,CharcoalLavender,MaroonMint,DarkCyanGold,DeepPurpleIvory,
   ForestPink,SteelRose,EggplantSun,rainbowFlow,heatmap, textGradientShift,
-  ColorPulse,
+  ColorPulse,Neonflicker,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,
+  ColorPop,LiquidMetal,
 
   //for testing 
   
   
-  Neonflicker,
-  liquidDrip,
-  MagneticPull,
-  PaperFold,
-  PixelGlitch,
-  Smoke,
-  Flare,
-  InkSpread,PulseMorph,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,ColorPop,LiquidMetal,
+  
+  
 
 } = exports;
 
