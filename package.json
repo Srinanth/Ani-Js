@@ -1,6 +1,6 @@
 {
   "name": "ani-js",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "A lightweight JavaScript animation library that mimics Tailwind-style utility classes — no Tailwind installation needed.",
   "main": "index.js",
   "scripts": {
