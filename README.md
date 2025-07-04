@@ -94,3 +94,49 @@ For full **features**, **class names**,**playground**, **demos**, and **advanced
 ⭐ If you find this project useful, consider [dropping a star](https://github.com/Srinanth/ani-js) on GitHub!
 
 ---
+
+## 🤝 Contributing
+
+### 🧭 Getting Started
+
+1. **Fork** the repository  
+2. **Clone your fork locally**  
+   ```bash
+   git clone https://github.com/Srinanth/Ani-Js.git
+   cd ani-js
+   ```
+3. **Create a feature branch**  
+   ```bash
+   git checkout -b addition/new-animation
+   ```
+4. **Make changes** – Add new animations, improve logic, or refactor existing code  
+5. **Commit your changes**  
+   ```bash
+   git commit -m "✨ Added New Animation"
+   ```
+6. **Push to your branch**  
+   ```bash
+   git push origin addition/new-animation
+   ```
+7. **Open a Pull Request** on GitHub
+
+---
+
+### 📐 Development Guidelines
+
+- **Code Style**: Follow existing patterns used in JavaScript, CSS, and React files  
+- **Animations**: Keep utility class names consistent (`tw-fade-in`, `tw-zoom-in`, etc.)
+- **Testing**:
+  - Manually test animations using the local playground page  
+  - Add unit tests where applicable *(planned for future integration)*
+- **CSS**: Avoid bloated styles — Ani-Js is meant to stay minimal and fast  
+- **Performance**: Prefer CSS-based animations over JS unless JavaScript is required
+
+---
+
+### 🧪 Local Dev Tips
+
+- Use the [Vite](https://vitejs.dev) dev server for rapid development  
+- Run a local playground to test all animations in real-time  
+
+---
