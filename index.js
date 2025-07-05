@@ -89,6 +89,13 @@ const animations = {
   scrollReveal: "tw-scroll-reveal",
   typewriter: "tw-typewriter",
   letterSpace:"tw-letter-space",
+  liquidDrip:"tw-liquid-drip",
+  MagneticPull:"tw-magnetic",
+  PaperFold:"tw-paper-fold",
+  PixelGlitch:"tw-glitch-pixel",
+  Smoke:"tw-smoke-out",
+  Flare:"tw-lens-flare",
+  InkSpread:"tw-ink-reveal",
 
 
   HoverPop: "tw-hoverpop",
@@ -149,16 +156,10 @@ const animations = {
   heatmap: "tw-heatmap",
   textGradientShift: "tw-text-gradient-shift",
   ColorPulse:"tw-color-pulse",
+  Neonflicker:"tw-neon-flicker",
   //new animations for testing 
   
-  Neonflicker:"tw-neon-flicker",
-  liquidDrip:"tw-liquid-drip",
-  MagneticPull:"tw-magnetic",
-  PaperFold:"tw-paper-fold",
-  PixelGlitch:"tw-glitch-pixel",
-  Smoke:"tw-smoke-out",
-  Flare:"tw-lens-flare",
-  InkSpread:"tw-ink-reveal",
+  
   PulseMorph:"tw-pulse-morph",
   GradientWave:"tw-gradient-wave",
   ColorExpand:"tw-color-expand",
