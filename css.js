@@ -1434,7 +1434,7 @@ export const animationsCSS = `
     transform: scale(0.8);
     background-color: #9a4dff;
   }
-}
+} 
 .tw-color-pop {
   animation: tw-color-pop 3s ease infinite;
 }
