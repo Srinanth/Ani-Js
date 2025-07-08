@@ -17,7 +17,7 @@ A lightweight JavaScript animation library that mimics Tailwind-style utility cl
 For full **features**, **class names**,**playground**, **demos**, and **advanced usage**, visit the official website:  
 👉 [Ani-Js.com](https://ani-js.vercel.app/)
 
-⭐ If you find this package useful, consider [dropping a star](https://github.com/Srinanth/ani-js) on GitHub!
+⭐ If you find this package useful, please consider [dropping a star](https://github.com/Srinanth/ani-js) on GitHub!
 
 ---
 
