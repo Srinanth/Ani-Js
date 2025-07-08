@@ -1472,3 +1472,159 @@
   display: inline-block;
   background-size: 200% 200%;
 }
+
+
+@keyframes tw-shapeshift {
+  0% {
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    transform: skew(0deg);
+  }
+  15% { /* Circle */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: skew(0deg);
+  }
+  30% { /* Tall Rectangle */
+    border-radius: 0;
+    width: 80px;
+    height: 120px;
+    transform: skew(0deg);
+  }
+  45% { /* Parallelogram */
+    border-radius: 0;
+    width: 120px;
+    height: 80px;
+    transform: skew(30deg);
+  }
+  60% { /* Squircle */
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+    transform: skew(0deg);
+  }
+  75% { /* Diamond */
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+  }
+  90% { /* Rounded Rectangle */
+    border-radius: 15px;
+    width: 120px;
+    height: 80px;
+    transform: skew(0deg);
+  }
+  100% { /* Back to Square */
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    transform: skew(0deg);
+  }
+}
+
+.tw-shapeshift {
+  animation: tw-shapeshift 8s ease-in-out infinite;
+  background: linear-gradient(45deg, #ff4d4d, #4d79ff);
+  margin: 20px;
+  display: inline-block;
+  will-change: border-radius, transform, width, height;
+}
+
+@keyframes tw-white-pink {
+  0% { background-color: white; color: pink; }
+  100% { background-color: white; color: pink; }
+}
+.tw-white-pink {
+  animation: tw-white-pink 1s linear infinite;
+}
+
+@keyframes tw-white-red {
+  0% { background-color: white; color: red; }
+  100% { background-color: white; color: red; }
+}
+.tw-white-red {
+  animation: tw-white-red 1s linear infinite;
+}
+
+@keyframes tw-white-blue {
+  0% { background-color: white; color: blue; }
+  100% { background-color: white; color: blue; }
+}
+.tw-white-blue {
+  animation: tw-white-blue 1s linear infinite;
+}
+
+@keyframes tw-white-green {
+  0% { background-color: white; color: green; }
+  100% { background-color: white; color: green; }
+}
+.tw-white-green {
+  animation: tw-white-green 1s linear infinite;
+}
+
+@keyframes tw-white-purple {
+  0% { background-color: white; color: purple; }
+  100% { background-color: white; color: purple; }
+}
+.tw-white-purple {
+  animation: tw-white-purple 1s linear infinite;
+}
+
+@keyframes tw-white-orange {
+  0% { background-color: white; color: orange; }
+  100% { background-color: white; color: orange; }
+}
+.tw-white-orange {
+  animation: tw-white-orange 1s linear infinite;
+}
+
+@keyframes tw-white-yellow {
+  0% { background-color: white; color: yellow; }
+  100% { background-color: white; color: yellow; }
+}
+.tw-white-yellow {
+  animation: tw-white-yellow 1s linear infinite;
+}
+
+@keyframes tw-white-brown {
+  0% { background-color: white; color: brown; }
+  100% { background-color: white; color: brown; }
+}
+.tw-white-brown {
+  animation: tw-white-brown 1s linear infinite;
+}
+
+@keyframes tw-white-cyan {
+  0% { background-color: white; color: cyan; }
+  100% { background-color: white; color: cyan; }
+}
+.tw-white-cyan {
+  animation: tw-white-cyan 1s linear infinite;
+}
+
+@keyframes tw-white-lime {
+  0% { background-color: white; color: lime; }
+  100% { background-color: white; color: lime; }
+}
+.tw-white-lime {
+  animation: tw-white-lime 1s linear infinite;
+}
+
+@keyframes tw-white-gold {
+  0% { background-color: white; color: gold; }
+  100% { background-color: white; color: gold; }
+}
+.tw-white-gold {
+  animation: tw-white-gold 1s linear infinite;
+}
+
+@keyframes tw-white-indigo {
+  0% { background-color: white; color: indigo; }
+  100% { background-color: white; color: indigo; }
+}
+.tw-white-indigo {
+  animation: tw-white-indigo 1s linear infinite;
+}
