@@ -157,6 +157,18 @@ const animations = {
   textGradientShift: "tw-text-gradient-shift",
   ColorPulse:"tw-color-pulse",
   Neonflicker:"tw-neon-flicker",
+  WhitePink:"tw-white-pink",
+  WhiteRed:"tw-white-red",
+  WhiteBlue: "tw-white-blue",
+  WhiteGreen: "tw-white-green",
+  WhitePurple: "tw-white-purple",
+  WhiteOrange: "tw-white-orange",
+  WhiteYellow: "tw-white-yellow",
+  WhiteBrown: "tw-white-brown",
+  WhiteCyan: "tw-white-cyan",
+  WhiteLime: "tw-white-lime",
+  WhiteGold: "tw-white-gold",
+  WhiteIndigo: "tw-white-indigo",
   //new animations for testing 
   
   
@@ -167,6 +179,7 @@ const animations = {
   ColorBounceBalls:"tw-bounce-color",
   ColorPop:"tw-color-pop",
   LiquidMetal:"tw-liquid-metal",
+  shapeShift: "tw-shapeshift",
 };
 
 const exports = {};
@@ -208,8 +221,19 @@ export const {
 
   //for testing 
   
-  
-  
+  shapeShift,
+  WhitePink,
+  WhiteRed,
+  WhiteBlue,
+  WhiteGreen,
+  WhitePurple,
+  WhiteOrange,
+  WhiteYellow,
+  WhiteBrown,
+  WhiteCyan,
+  WhiteLime,
+  WhiteGold,
+  WhiteIndigo,
   
 
 } = exports;
