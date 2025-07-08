@@ -346,6 +346,9 @@ const animationCategories = {
 
           {/* Animation Sections */}
           <div className="space-y-16">
+            <p className="text-blue-200 text-center mt-2 italic text-sm ani-scroll">
+              *All animations are designed with a 4-second demo loop here for preview purposes, but in actual usage, most of them run infinitely unless you customize the duration.
+            </p>
             {/* Entrance Animations */}
             <div id="entrance" className="ani-scroll">
               <h2 className="text-2xl font-semibold mb-6 text-blue-300 border-b border-blue-800 pb-2">Entrance Animations</h2>
