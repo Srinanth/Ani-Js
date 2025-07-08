@@ -64,7 +64,7 @@ yarn add ani-js
 > - To use as classes in Html use stylesheets as [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css)
 > - For React Import the package then in your App.jsx or Main.jsx import the classes from "../node_modules/ani-js/ani-js.css" set it as global so you can use it anywhere.
 > Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
-
+> - **All the other use cases and informations are provided in the documentation!**
 ---
 
 ### ⚛️ React
