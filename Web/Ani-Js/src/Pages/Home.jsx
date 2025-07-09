@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { 
-  FiHome, 
-  FiPlay, 
-  FiSettings, 
-  FiBook, 
-  FiZap, 
+import {
+  FiHome,
+  FiPlay,
+  FiSettings,
+  FiBook,
+  FiZap,
   FiBox,
   FiTool,
   FiFeather,
@@ -23,7 +23,6 @@ import Background from '../assets/Background.svg';
 export default function HomePage() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,24 +35,24 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
-useEffect(() => {
-  const elements = document.querySelectorAll('.ani-scroll');
+  useEffect(() => {
+    const elements = document.querySelectorAll('.ani-scroll');
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('tw-fade-in');
-        entry.target.style.opacity = 1;
-        obs.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('tw-fade-in');
+          entry.target.style.opacity = 1;
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      el.style.opacity = 0;
+      observer.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  elements.forEach(el => {
-    el.style.opacity = 0;
-    observer.observe(el);
-  });
-}, []);
+  }, []);
 
 
   return (
@@ -81,35 +80,6 @@ useEffect(() => {
           </div>
         </nav>
 
-        {/* Mobile Sidebar */}
-        <div className="md:hidden fixed right-0 top-1/2 transform -translate-y-1/2 z-50">
-          <div
-            className={`bg-black/80 backdrop-blur-md rounded-l-lg p-2 transition-all duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} tw-slide-left`}
-            onMouseEnter={() => setMobileMenuOpen(true)}
-            onMouseLeave={() => setMobileMenuOpen(false)}
-          >
-            <div className="flex flex-col space-y-4">
-              <Link to="/" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Home">
-                <FiHome size={24} />
-                {mobileMenuOpen && <span className="ml-2">Home</span>}
-              </Link>
-              <Link to="/usage" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Usage">
-                <FiBook size={24} />
-                {mobileMenuOpen && <span className="ml-2">Usage</span>}
-              </Link>
-              <Link to="/animations" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Animations">
-                <FiSettings size={24} />
-                {mobileMenuOpen && <span className="ml-2">Animations</span>}
-              </Link>
-              <Link to="/playground" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Playground">
-                <FiPlay size={24} />
-                {mobileMenuOpen && <span className="ml-2">Playground</span>}
-              </Link>
-
-            </div>
-          </div>
-        </div>
-
         {/* Hero Section */}
         <div className="w-full min-h-screen flex items-center justify-center text-center px-6 py-24">
           <div className="max-w-4xl mx-auto p-10">
@@ -131,7 +101,7 @@ useEffect(() => {
           <div className=" ani-scroll max-w-4xl mx-auto p-8">
             <h2 className="text-3xl font-bold mb-6 text-blue-400">What is Ani-Js?</h2>
             <p className="text-lg md:text-xl leading-relaxed">
-              Ani-Js is a flexible animation library offering both class-based and programmatic animations for web developers. 
+              Ani-Js is a flexible animation library offering both class-based and programmatic animations for web developers.
               Whether you're working with vanilla JavaScript or React, Ani-Js helps you animate with ease—no setup bloat, no dependencies.
             </p>
           </div>
@@ -171,7 +141,7 @@ useEffect(() => {
                 </div>
                 <div className="bg-blue-900/50 p-6 rounded-xl border border-blue-800 tw-hoverenlarge">
                   <h3 className="text-xl font-semibold mb-3 flex items-center text-blue-300">
-                     <FiLayers className="mr-2" /> 100+ Animations
+                    <FiLayers className="mr-2" /> 100+ Animations
                   </h3>
                   <p>Includes entrance/exit, hover effects, transitions, color changes, utility animations, and more — all modular.</p>
                 </div>
@@ -189,9 +159,9 @@ useEffect(() => {
         <div className="py-16 px-6 ani-scroll">
           <div className="max-w-6xl mx-auto">
             <div className="p-8">
-            <h2 className="text-3xl font-bold text-center mb-12 text-blue-400 flex items-center justify-center gap-2">
-              <FiTarget size={28} /> Why Choose Ani-Js?
-            </h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-blue-400 flex items-center justify-center gap-2">
+                <FiTarget size={28} /> Why Choose Ani-Js?
+              </h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -238,30 +208,30 @@ useEffect(() => {
         <div className="py-16 px-6 ani-scroll">
           <div className="max-w-4xl mx-auto p-8">
             <h2 className="text-3xl font-bold text-center mb-12 text-blue-400 flex items-center justify-center gap-2">
-            <FiHelpCircle size={28} /> Frequently Asked Questions
-          </h2>
-            
+              <FiHelpCircle size={28} /> Frequently Asked Questions
+            </h2>
+
             <div className="space-y-4">
               <details className="bg-blue-900/50 rounded-lg p-4 border border-blue-800">
                 <summary className="font-semibold text-blue-200 cursor-pointer">How is Ani-Js different from anime.js or GSAP?</summary>
                 <p className="mt-2 text-blue-100">Ani-Js is much lighter, dependency-free, and simpler. Ideal for quick UI animations without configuration.</p>
               </details>
-              
+
               <details className="bg-blue-900/50 rounded-lg p-4 border border-blue-800">
                 <summary className="font-semibold text-blue-200 cursor-pointer">Can I use Ani-Js with React?</summary>
                 <p className="mt-2 text-blue-100">Yes! You can import and use fadeIn(el) inside useEffect, or use class names with JSX.</p>
               </details>
-              
+
               <details className="bg-blue-900/50 rounded-lg p-4 border border-blue-800">
                 <summary className="font-semibold text-blue-200 cursor-pointer">Does it support custom animations?</summary>
                 <p className="mt-2 text-blue-100">Yes, you can extend Ani-Js animations or create your own with similar structure.</p>
               </details>
-              
+
               <details className="bg-blue-900/50 rounded-lg p-4 border border-blue-800">
                 <summary className="font-semibold text-blue-200 cursor-pointer">How many animations are included?</summary>
                 <p className="mt-2 text-blue-100">100+ and growing — entrance, hover, transition, utility, and more.</p>
               </details>
-              
+
               <details className="bg-blue-900/50 rounded-lg p-4 border border-blue-800">
                 <summary className="font-semibold text-blue-200 cursor-pointer">Can I animate on scroll or hover?</summary>
                 <p className="mt-2 text-blue-100">Yes. You can trigger animations on any DOM event, including scroll, hover, click, etc.</p>
@@ -270,23 +240,23 @@ useEffect(() => {
           </div>
         </div>
 
-         {/* Built With Ani-Js Section */}
+        {/* Built With Ani-Js Section */}
         <div className="py-16 px-6 ani-scroll">
           <div className="max-w-4xl mx-auto p-8 text-center">
             <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center justify-center gap-2">
-            <FiBox size={28} /> Built with ani-js
-          </h2>
+              <FiBox size={28} /> Built with ani-js
+            </h2>
             <p className="text-lg md:text-xl leading-relaxed text-blue-100">
               This very website uses <strong>Ani-Js</strong> animations for its components — scroll reveals, hover effects, entrances, and more.
               You're not just reading about it — you're experiencing it live in action! 🎉
             </p>
           </div>
         </div>
-         {/* Community Section */}
+        {/* Community Section */}
         <div className="py-16 px-6 text-center ani-scroll">
-                  <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center justify-center gap-2">
-          <FiGlobe size={28} /> Community & Support
-        </h2>
+          <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center justify-center gap-2">
+            <FiGlobe size={28} /> Community & Support
+          </h2>
           <div className="flex justify-center gap-6 flex-wrap">
             <a
               href="https://github.com/Srinanth/Ani-Js"
