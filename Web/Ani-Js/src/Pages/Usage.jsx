@@ -18,7 +18,6 @@ import Background from '../assets/Background.png';
 export default function UsagePage() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,34 +69,6 @@ export default function UsagePage() {
           </div>
         </div>
       </nav>
-
-      {/* Mobile Sidebar */}
-      <div className="md:hidden fixed right-0 top-1/2 transform -translate-y-1/2 z-50">
-        <div
-          className={`bg-black/80 backdrop-blur-md rounded-l-lg p-2 transition-all duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} tw-slide-left`}
-          onMouseEnter={() => setMobileMenuOpen(true)}
-          onMouseLeave={() => setMobileMenuOpen(false)}
-        >
-          <div className="flex flex-col space-y-4">
-            <Link to="/" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Home">
-              <FiHome size={24} />
-              {mobileMenuOpen && <span className="ml-2">Home</span>}
-            </Link>
-            <Link to="/usage" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Usage">
-              <FiBook size={24} />
-              {mobileMenuOpen && <span className="ml-2">Usage</span>}
-            </Link>
-            <Link to="/animations" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Animations">
-              <FiSettings size={24} />
-              {mobileMenuOpen && <span className="ml-2">Animations</span>}
-            </Link>
-            <Link to="/playground" className="p-2 text-blue-200 hover:text-blue-400 transition flex items-center tw-hoverenlarge" title="Playground">
-              <FiPlay size={24} />
-              {mobileMenuOpen && <span className="ml-2">Playground</span>}
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 py-12 px-4 sm:px-6">

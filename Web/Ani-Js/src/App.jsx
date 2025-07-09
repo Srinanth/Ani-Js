@@ -4,6 +4,7 @@ import PlayGroundPage from './Pages/PlayGround';
 import AnimationsPage from './Pages/Animations';
 import { Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import MobileNavigation from './components/MobileNavigation';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/playground" element={<PlayGroundPage />} />
       <Route path="/animations" element={<AnimationsPage />} />
     </Routes>
+    <MobileNavigation />
     </>
   );
 
