@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import { FiHome, FiPlay, FiSettings, FiBook,FiFilm } from 'react-icons/fi';
 
-import Background from '../assets/Background.png';
+import Background from '../assets/Background.svg';
 
 export default function AnimationsPage() {
   const [prevScroll, setPrevScroll] = useState(0);

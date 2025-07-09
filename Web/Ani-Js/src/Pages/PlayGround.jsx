@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiHome, FiPlay, FiSettings, FiBook, FiCode, FiMonitor } from 'react-icons/fi';
-import Background from '../assets/Background.png';
+import { FiHome, FiPlay, FiSettings, FiBook,FiCode, FiMonitor   } from 'react-icons/fi';
+import Background from '../assets/Background.svg';
 
 export default function PlayGroundPage() {
   const iframeRef = useRef(null);

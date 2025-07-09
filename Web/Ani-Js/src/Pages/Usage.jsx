@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fi';
 import { SiYarn } from 'react-icons/si';
 import { FaReact, FaNpm } from 'react-icons/fa';
-import Background from '../assets/Background.png';
+import Background from '../assets/Background.svg';
 
 export default function UsagePage() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
