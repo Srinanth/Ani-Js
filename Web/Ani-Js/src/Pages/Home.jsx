@@ -18,7 +18,7 @@ import {
   FiCodesandbox
 } from 'react-icons/fi';
 import { FaGithub, FaNpm } from 'react-icons/fa';
-import Background from '../assets/Background.png';
+import Background from '../assets/Background.svg';
 
 export default function HomePage() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
