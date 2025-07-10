@@ -1630,5 +1630,45 @@ export const animationsCSS = `
   animation: tw-white-indigo 1s linear infinite;
 }
 
+@keyframes tw-color-flux {
+  0% {
+    color: #ff4d4d;
+    background-color: #4d79ff;
+  }
+  15% {
+    color: #ffffff;
+    background-color: #ff4d4d;
+  }
+  30% {
+    color: #4dff4d;
+    background-color: #ff4dff;
+  }
+  45% {
+    color: #ffff4d;
+    background-color: #4d4dff;
+  }
+  60% {
+    color: #ff4dff;
+    background-color: #4dff4d;
+  }
+  75% {
+    color: #4d79ff;
+    background-color: #ffff4d;
+  }
+  90% {
+    color: #4dff4d;
+    background-color: #ff4d4d;
+  }
+  100% {
+    color: #ff4d4d;
+    background-color: #4d79ff;
+  }
+}
 
+.tw-color-flux {
+  animation: tw-color-flux 12s ease infinite;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 4px;
+}
 `;
