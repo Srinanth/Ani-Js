@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
-  FiHome,
   FiPlay,
-  FiSettings,
-  FiBook,
   FiZap,
   FiBox,
   FiTool,
@@ -22,12 +19,10 @@ import Background from '../assets/Background.svg';
 
 export default function HomePage() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -67,19 +62,6 @@ export default function HomePage() {
     >
       {/* Content wrapper */}
       <div className="relative z-10">
-        {/* Desktop Navbar */}
-        <nav className={`fixed w-full bg-black/80 backdrop-blur-md z-50 transition-all duration-300 ${visible ? 'top-0' : '-top-20'} hidden md:block tw-slide-down`}>
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <Link to="/" className="text-blue-400 text-2xl font-bold tw-pulse">Ani-Js</Link>
-            <div className="flex space-x-8">
-              <Link to="/" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Home</Link>
-              <Link to="/usage" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Usage</Link>
-              <Link to="/animations" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Animations</Link>
-              <Link to="/playground" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Playground</Link>
-            </div>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <div className="w-full min-h-screen flex items-center justify-center text-center px-6 py-24">
           <div className="max-w-4xl mx-auto p-10">

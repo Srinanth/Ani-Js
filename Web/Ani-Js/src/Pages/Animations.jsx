@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect} from 'react';
-import { FiHome, FiPlay, FiSettings, FiBook,FiFilm } from 'react-icons/fi';
+import {FiFilm } from 'react-icons/fi';
 
 import Background from '../assets/Background.svg';
 
 export default function AnimationsPage() {
   const [prevScroll, setPrevScroll] = useState(0);
-  const [visible, setVisible] = useState(true);
   const [activeSection, setActiveSection] = useState('entrance');
   const [Animation, setAnimation] = useState(0);
 
@@ -189,7 +187,6 @@ const animationCategories = {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScroll > currentScrollPos || currentScrollPos < 10);
       setPrevScroll(currentScrollPos);
     };
 
@@ -247,18 +244,7 @@ const animationCategories = {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Desktop Navbar */}
-      <nav className={`fixed w-full bg-black/80 backdrop-blur-md z-50 transition-all duration-300 ${visible ? 'top-0' : '-top-20'} hidden md:block tw-slide-down`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="text-blue-400 text-2xl font-bold tw-pulse">Ani-Js</Link>
-          <div className="flex space-x-8">
-            <Link to="/" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Home</Link>
-            <Link to="/usage" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Usage</Link>
-            <Link to="/animations" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Animations</Link>
-            <Link to="/playground" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Playground</Link>
-          </div>
-        </div>
-      </nav>
+      
 
       <div className="relative z-10 py-16 px-6">
         <div className="max-w-5xl mx-auto p-10">
