@@ -171,7 +171,7 @@ const animations = {
   WhiteIndigo: "tw-white-indigo",
   //new animations for testing 
   
-  
+  ColorFlux: "tw-color-flux",
   PulseMorph:"tw-pulse-morph",
   GradientWave:"tw-gradient-wave",
   ColorExpand:"tw-color-expand",
@@ -234,6 +234,7 @@ export const {
   WhiteLime,
   WhiteGold,
   WhiteIndigo,
+  ColorFlux,
   
 
 } = exports;
