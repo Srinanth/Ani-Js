@@ -5,16 +5,17 @@
 
 A lightweight JavaScript animation library that mimics Tailwind-style utility classes — no Tailwind installation needed. Injects minimal CSS for clean animations like `fadeIn`, `slideUp`, and more.
 
-- 📦 No Tailwind required  
-- 💨 Utility-class style like `.tw-fade-in`  
-- ⚡ Zero setup, just import and use  
-- 🧩 Works with plain JavaScript, React, Vue, TypeScript, and more  
-- 🎨 100+ prebuilt animations and effects
+* 📦 No Tailwind required
+* 💨 Utility-class style like `.tw-fade-in`
+* ⚡ Zero setup, just import and use
+* 🧩 Works with plain JavaScript, React, Vue, TypeScript, and more
+* 🎨 100+ prebuilt animations and effects
 
 ---
+
 ## 📚 Documentation & Playground
 
-For full **features**, **class names**,**playground**, **demos**, and **advanced usage**, visit the official website:  
+For full **features**, **class names**, **playground**, **demos**, and **advanced usage**, visit the official website:
 👉 [Ani-Js.com](https://ani-js.vercel.app/)
 
 ⭐ If you find this package useful, please consider [dropping a star](https://github.com/Srinanth/ani-js) on GitHub!
@@ -37,13 +38,25 @@ yarn add ani-js
 
 ## 🔧 Usage
 
-### 📜 Vanilla JavaScript
+### 📜 HTML / Vanilla JavaScript
+
+#### ✅ Class-based (CSS-only, simplest)
+
+```html
+<!-- HTML -->
+<!-- Link the CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css">
+
+<div class="tw-fade-in">Hello World</div>
+
+```
+
+#### ✅ JavaScript Function-based (Dynamic)
 
 ```html
 <div id="box">Hello</div>
 <button id="btn">Animate</button>
-<!-- for class based usage -->
-<div id="box" class="tw-fade-in">Hello</div>
+
 <script type="module">
   import { fadeIn } from 'ani-js';
 
@@ -53,34 +66,33 @@ yarn add ani-js
   });
 </script>
 ```
-> ⚠️ **Important:**  
-> This example uses **ES Module syntax (`import`)** and **will not work by directly opening the HTML file in a browser**.  
->
-> To run this successfully, you must:
-> - Use a **module-aware bundler or dev server** such as **[Vite](https://vitejs.dev/)**, **Webpack**, or **Parcel**
-> **OR**
-> - Load `ani-js` from a **CDN** (like [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/index.js), [UNPKG](https://app.unpkg.com/ani-js@1.4.0/files/index.js)) that 
-> supports **ES Modules**
-> - To use as classes in Html use stylesheets as [jsDelivr](https://cdn.jsdelivr.net/npm/ani-js@latest/ani-js.css)
-> - For React Import the package then in your App.jsx or Main.jsx import the classes from "../node_modules/ani-js/ani-js.css" set it as global so you can use it anywhere.
-> Without one of these setups, your browser will **throw a module resolution error** and the animation will fail to load.
-> - **All the other use cases and informations are provided in the documentation!**
+
+> ⚠️ **Note**: Direct ESM imports only work when served using a dev server (e.g. Vite, Webpack, Parcel), or from a CDN with module support.
+> For quick demos or class-only usage, prefer the CDN CSS approach.
+
 ---
 
 ### ⚛️ React
 
+#### Class-based (Best for global use)
+
+> Add to `main.jsx` or `App.jsx`:
+
+```js
+import 'ani-js/ani-js.css';
+```
+
+Then use:
+
+```jsx
+<div className="tw-slide-up">Hello</div>
+```
+
+#### JavaScript function-based (On event/effect)
+
 ```jsx
 import { slideUp } from 'ani-js';
-import { useEffect, useRef } from 'react';
-
-function MyComponent() {
-  return (
-    //for class based usage
-    <div className="tw-slide-up">
-      Welcome!
-    </div>
-  );
-}
+import { useRef, useEffect } from 'react';
 
 function MyComponent() {
   const ref = useRef();
@@ -93,28 +105,52 @@ function MyComponent() {
 }
 ```
 
+#### Global CSS import (best for most cases)
+
+In `src/index.css` or `App.css`:
+
+```css
+@import 'ani-js/ani-js.css';
+```
+
+This way, you don’t have to import CSS in your JS/TS files.
+
+---
+
+## 💡 Summary of Use Cases
+
+| Environment       | Class-based (CSS)     | Function-based (JS)                        |
+| ----------------- | --------------------- | ------------------------------------------ |
+| HTML              | ✅ Yes (via CDN)      | ✅ Yes (via import or CDN module)          |
+| React             | ✅ Yes (`ani-js.css`) | ✅ Yes (`import { fadeIn } from 'ani-js'`) |
+| Vue, Svelte, etc. | ✅ Yes                | ✅ Yes                                     |
+
 ---
 
 ## 🤝 Contributing
 
-### 🧭 Getting Started
+### 🗽 Getting Started
 
-1. **Fork** the repository  
-2. **Clone your fork locally**  
+1. **Fork** the repository
+2. **Clone your fork locally**
+
    ```bash
    git clone https://github.com/Srinanth/Ani-Js.git
    cd ani-js
    ```
-3. **Create a feature branch**  
+3. **Create a feature branch**
+
    ```bash
    git checkout -b addition/new-animation
    ```
-4. **Make changes** – Add new animations, improve logic, or refactor existing code  
-5. **Commit your changes**  
+4. **Make changes** – Add new animations, improve logic, or refactor existing code
+5. **Commit your changes**
+
    ```bash
    git commit -m "✨ Added New Animation"
    ```
-6. **Push to your branch**  
+6. **Push to your branch**
+
    ```bash
    git push origin addition/new-animation
    ```
@@ -122,21 +158,22 @@ function MyComponent() {
 
 ---
 
-### 📐 Development Guidelines
+### 📊 Development Guidelines
 
-- **Code Style**: Follow existing patterns used in JavaScript, CSS, and React files  
-- **Animations**: Keep utility class names consistent (`tw-fade-in`, `tw-zoom-in`, etc.)
-- **Testing**:
-  - Manually test animations using the local playground page  
-  - Add unit tests where applicable *(planned for future integration)*
-- **CSS**: Avoid bloated styles — Ani-Js is meant to stay minimal and fast  
-- **Performance**: Prefer CSS-based animations over JS unless JavaScript is required
+* **Code Style**: Follow existing patterns used in JavaScript, CSS, and React files
+* **Animations**: Use consistent utility class naming (`tw-fade-in`, `tw-bounce`, etc.)
+* **Testing**:
+
+  * Manually test animations using the local playground
+* **CSS**: Keep styles minimal and optimized
+* **Performance**: Prefer CSS animations unless JavaScript is necessary
 
 ---
 
 ### 🧪 Local Dev Tips
 
-- Use the [Vite](https://vitejs.dev) dev server for rapid development  
-- Run a local playground to test all animations in real-time  
+* Use [Vite](https://vitejs.dev) for a fast local development environment
+* Use the local playground HTML/React page to test all animations live
+* Keep animations scoped and reusable
 
 ---
