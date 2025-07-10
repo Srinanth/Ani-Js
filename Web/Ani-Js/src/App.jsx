@@ -5,11 +5,13 @@ import AnimationsPage from './Pages/Animations';
 import { Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import MobileNavigation from './components/MobileNavigation';
+import DesktopNavbar from './components/DesktopNavbar';
 
 
 function App() {
   return (
     <>
+    <DesktopNavbar />
     <Analytics />
     <Routes>
       <Route path="/" element={<HomePage />} />

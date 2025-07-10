@@ -1,11 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FiHome, FiPlay, FiSettings, FiBook,FiCode, FiMonitor   } from 'react-icons/fi';
+import { useEffect, useRef } from 'react';
+import { FiCode, FiMonitor   } from 'react-icons/fi';
 import Background from '../assets/Background.svg';
 
 export default function PlayGroundPage() {
   const iframeRef = useRef(null);
-  const [visible, setVisible] = useState(true);
   const defaultCode = `<!DOCTYPE html>
 <html>
   <head>
@@ -60,18 +58,6 @@ export default function PlayGroundPage() {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Desktop Navbar */}
-      <nav className={`fixed w-full bg-black/80 backdrop-blur-md z-50 transition-all duration-300 ${visible ? 'top-0' : '-top-20'} hidden md:block tw-slide-down`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="text-blue-400 text-2xl font-bold tw-pulse">Ani-Js</Link>
-          <div className="flex space-x-8">
-            <Link to="/" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Home</Link>
-            <Link to="/usage" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Usage</Link>
-            <Link to="/animations" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Animations</Link>
-            <Link to="/playground" className="text-blue-200 hover:text-blue-400 transition tw-hoverenlarge">Playground</Link>
-          </div>
-        </div>
-      </nav>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 p-6 pt-15">
         <div className="p-4">
