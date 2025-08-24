@@ -12,7 +12,7 @@ const animationCategories = {
     entrance: ['fadeIn', 'slideUp','hinge','stretchIn','fadeInUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomIn', 'bounceIn', 'flipInX', 'flipInY', 'rotateIn', 'rollIn', 'lightSpeedIn', 'jackInTheBox', 'revealUp', 'revealDown', 'expand', 'fadeSlide', 'scaleReveal', 'Curtain'],
     exit: ['fadeOut', 'slideUp', 'slideDown', 'slideLeft', 'slideRight', 'zoomOut', 'bounceOut', 'flipOutX', 'flipOutY', 'rotateOut', 'rollOut', 'lightSpeedOut', 'collapse', 'fadeSlide', 'Curtain','fadeOutUp','puffOut','vanishOut'],
     attention: ['bounce', 'shake', 'pulse', 'flash', 'wobble', 'swing', 'tada', 'jello', 'heartbeat', 'blink', 'wave', 'sway','rubberBand','wiggle','spin','liquidDrip','MagneticPull','PaperFold','PixelGlitch','Smoke','Flare','InkSpread'],
-    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap','frostedGlass','ripple','hologram','loadComplete','scrollReveal','typewriter', 'letterSpace','shapeShift'],
+    effects: ['Glow', 'Shadow', 'neonGlow', 'shimmer', 'glitch', 'GlowPulse', 'Sparkle', 'Mirror', 'Aura', 'Dust', 'Snap','frostedGlass','ripple','hologram','loadComplete','scrollReveal','typewriter', 'letterSpace','shapeShift',"tw-text-scramble","tw-liquid-fill","tw-matrix-rain","tw-particle-explosion","tw-hyperspace-jump","tw-vortex-spin","tw-prism-reflection",],
     transforms: ['scaleUp', 'scaleDown', 'enlarge', 'shrink', 'rotate', 'floating', 'Teleport', 'ZigZag', 'Orbit', 'PopUpSpin', 'UpsideDown','skew','warp'],
     hovers: ['HoverPop', 'HoverShrink', 'HoverEnlarge', 'HoverShake', 'HoverFade', 'HoverGlow', 'HoverShadow', 'hoverBlur', 'hoverRotate', 'hoverUnderlineLeft', 'hoverUnderlineRight', 'hoverBorderGlow', 'hoverScaleBounce', 'hoverTilt', 'HoverUpsideDown', 'HoverTeleport','hoverSkew','hoverJitter'],
     color: ['ColorCycle','ColorFlux', 'BlackRed', 'BlackBlue', 'BlackGreen', 'BlackPurple', 'BlackYellow', 'BlackWhite', 'BlackOrange', 'BlackPink', 'BlackGray', 'BlackCyan', 'BlackBrown', 'BlackGold', 'BlackSilver', 'BlackMagenta', 'BlueYellow', 'DarkGreenLime', 'PurpleOrange', 'IndigoPink', 'GrayCyan', 'DarkBlueWhite', 'TealSalmon', 'OliveViolet', 'BrownSkyBlue', 'MidnightGreenMint', 'CrimsonLemon', 'SlatePeach', 'CharcoalLavender', 'MaroonMint', 'DarkCyanGold', 'DeepPurpleIvory', 'ForestPink', 'SteelRose', 'EggplantSun','rainbowFlow','heatmap','textGradientShift','ColorPulse','Neonflicker','PulseMorph','GradientWave','ColorExpand','RotateHue','ColorBounceBalls','ColorPop','LiquidMetal','WhitePink','WhiteRed','WhiteBlue','WhiteGreen','WhitePurple','WhiteOrange','WhiteYellow','WhiteBrown','WhiteCyan','WhiteLime','WhiteGold','WhiteIndigo',],
@@ -183,6 +183,14 @@ const animationCategories = {
     WhiteIndigo: "tw-white-indigo",
     shapeShift: "tw-shapeshift",
     ColorFlux: "tw-color-flux",
+    textScramble: "tw-text-scramble",
+    liquidFill: "tw-liquid-fill",
+    matrixRain: "tw-matrix-rain",
+    particleExplosion: "tw-particle-explosion",
+    hyperspaceJump: "tw-hyperspace-jump",
+    vortexSpin: "tw-vortex-spin",
+    prismReflection: "tw-prism-reflection",
+
   };
 
   useEffect(() => {
