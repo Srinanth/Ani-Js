@@ -1671,4 +1671,178 @@ export const animationsCSS = `
   display: inline-block;
   border-radius: 4px;
 }
+
+@keyframes tw-liquid-fill {
+  0% { 
+    background-position: 0% 100%;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% { 
+    background-position: 100% 0%;
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% { 
+    background-position: 0% 100%;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+.tw-liquid-fill {
+  animation: tw-liquid-fill 8s ease-in-out infinite;
+  background: linear-gradient(45deg, #ff4d4d, #4d79ff, #4dff4d);
+  background-size: 200% 200%;
+}
+@keyframes tw-text-scramble {
+  0% { 
+    content: "A";
+    opacity: 0.3;
+    transform: translateY(-10px);
+  }
+  10% { 
+    content: "X"; 
+    opacity: 0.6;
+  }
+  20% { 
+    content: "5"; 
+    opacity: 0.8;
+  }
+  30% { 
+    content: "M"; 
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tw-text-scramble::before {
+  content: "";
+  animation: tw-text-scramble 0.8s steps(10) forwards;
+}
+@keyframes tw-matrix-rain {
+  0% { 
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  80% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(500%);
+    opacity: 0;
+  }
+}
+.tw-matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+.tw-matrix-rain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(transparent, #0f0, transparent);
+  animation: tw-matrix-rain 2s linear infinite;
+}
+@keyframes tw-particle-explosion {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+.tw-particle-explosion {
+  position: relative;
+}
+.tw-particle-explosion span {
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: tw-particle-explosion 1s ease-out forwards;
+}
+@keyframes tw-tornado-twist {
+  0% { 
+    transform: rotate(0deg) translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: rotate(180deg) translateY(-20px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% { 
+    transform: rotate(360deg) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.tw-tornado-twist {
+  animation: tw-tornado-twist 3s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes tw-hyperspace-jump {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(0) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+.tw-hyperspace-jump {
+  animation: tw-hyperspace-jump 2s ease infinite;
+}
+@keyframes tw-vortex-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-radius: 50%;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+    border-radius: 10%;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    border-radius: 50%;
+  }
+}
+.tw-vortex-spin {
+  animation: tw-vortex-spin 4s ease-in-out infinite;
+}
+@keyframes tw-prism-reflection {
+  0% { 
+    filter: hue-rotate(0deg) drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+  }
+  33% { 
+    filter: hue-rotate(120deg) drop-shadow(0 0 5px rgba(0, 255, 0, 0.5));
+  }
+  66% { 
+    filter: hue-rotate(240deg) drop-shadow(0 0 5px rgba(0, 0, 255, 0.5));
+  }
+  100% { 
+    filter: hue-rotate(360deg) drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+  }
+}
+.tw-prism-reflection {
+  animation: tw-prism-reflection 6s linear infinite;
+}
+
 `;

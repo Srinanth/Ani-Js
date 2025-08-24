@@ -169,8 +169,6 @@ const animations = {
   WhiteLime: "tw-white-lime",
   WhiteGold: "tw-white-gold",
   WhiteIndigo: "tw-white-indigo",
-  //new animations for testing 
-  
   ColorFlux: "tw-color-flux",
   PulseMorph:"tw-pulse-morph",
   GradientWave:"tw-gradient-wave",
@@ -180,6 +178,17 @@ const animations = {
   ColorPop:"tw-color-pop",
   LiquidMetal:"tw-liquid-metal",
   shapeShift: "tw-shapeshift",
+  //new animations for testing 
+  
+  textScramble: "tw-text-scramble",
+  liquidFill: "tw-liquid-fill",
+  matrixRain: "tw-matrix-rain",
+  particleExplosion: "tw-particle-explosion",
+  hyperspaceJump: "tw-hyperspace-jump",
+  vortexSpin: "tw-vortex-spin",
+  prismReflection: "tw-prism-reflection",
+
+
 };
 
 const exports = {};
@@ -217,25 +226,17 @@ export const {
   SlatePeach,CharcoalLavender,MaroonMint,DarkCyanGold,DeepPurpleIvory,
   ForestPink,SteelRose,EggplantSun,rainbowFlow,heatmap, textGradientShift,
   ColorPulse,Neonflicker,GradientWave,ColorExpand,RotateHue,ColorBounceBalls,
-  ColorPop,LiquidMetal,
+  ColorPop,LiquidMetal,  shapeShift,WhitePink,WhiteRed,WhiteBlue,WhiteGreen,WhitePurple,
+  WhiteOrange,WhiteYellow,WhiteBrown,WhiteCyan,WhiteLime,WhiteGold,WhiteIndigo,ColorFlux,
 
   //for testing 
+  liquidFill,
+  textScramble,
+  matrixRain,
+  particleExplosion,
+  hyperspaceJump,
+  vortexSpin,
+  prismReflection,
   
-  shapeShift,
-  WhitePink,
-  WhiteRed,
-  WhiteBlue,
-  WhiteGreen,
-  WhitePurple,
-  WhiteOrange,
-  WhiteYellow,
-  WhiteBrown,
-  WhiteCyan,
-  WhiteLime,
-  WhiteGold,
-  WhiteIndigo,
-  ColorFlux,
-  
-
 } = exports;
 
